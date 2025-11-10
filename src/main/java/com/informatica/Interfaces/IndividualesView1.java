@@ -23,6 +23,36 @@ public class IndividualesView1 extends javax.swing.JFrame {
         tipoFuente = new CargarTipografias();
         btnMenu.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0, 48));
         lblTitulo.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,85));
+        
+        //Asignacion de fuentes a los titulos mayores
+        jh2_1.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_2.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_3.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_4.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_5.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_6.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_7.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_8.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_9.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_10.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_11.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_12.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_13.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        jh2_14.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,36));
+        
+        //Asignacion de fuentes a los titulos menores
+        
+        jLabelPollo1.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo2.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo3.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo4.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo5.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo6.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo7.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo8.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo9.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        jLabelPollo10.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        
     }
 
     /**
@@ -45,66 +75,62 @@ public class IndividualesView1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         background = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jPanelPechuga = new javax.swing.JPanel();
+        jLabelPollo1 = new javax.swing.JLabel();
+        jh2_1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jPanelAlita = new javax.swing.JPanel();
+        jh2_2 = new javax.swing.JLabel();
+        jLabelPollo2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jPanelPierna = new javax.swing.JPanel();
+        jh2_3 = new javax.swing.JLabel();
+        jLabelPollo3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
+        jPanelPicantePollo = new javax.swing.JPanel();
+        jh2_4 = new javax.swing.JLabel();
+        jLabelPollo4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
+        jPanelAlitas = new javax.swing.JPanel();
+        jh2_5 = new javax.swing.JLabel();
+        jLabelPollo5 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
+        jPanelTenders = new javax.swing.JPanel();
+        jh2_6 = new javax.swing.JLabel();
+        jLabelPollo6 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
-        jPanel14 = new javax.swing.JPanel();
+        jPanelEnsalda = new javax.swing.JPanel();
+        jh2_7 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel16 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
+        jPanelPapasFritas = new javax.swing.JPanel();
+        jh2_8 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jPanel24 = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
+        jPanelCocaLata = new javax.swing.JPanel();
+        jh2_9 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanelCocaJumbo = new javax.swing.JPanel();
+        jh2_10 = new javax.swing.JLabel();
+        jLabelPollo7 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
+        jPanelFrescoCrema = new javax.swing.JPanel();
+        jh2_11 = new javax.swing.JLabel();
+        jLabelPollo8 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanelPanPollo = new javax.swing.JPanel();
+        jh2_12 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanelBurguerPollo = new javax.swing.JPanel();
+        jh2_13 = new javax.swing.JLabel();
+        jLabelPollo9 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jPanel26 = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
+        jPanelTacosPollo = new javax.swing.JPanel();
+        jh2_14 = new javax.swing.JLabel();
+        jLabelPollo10 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
+        jPanelSalchipapa = new javax.swing.JPanel();
+        jh2_15 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -188,6 +214,7 @@ public class IndividualesView1 extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(193, 39, 45));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 2));
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         background.setBackground(new java.awt.Color(248, 245, 240));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -202,321 +229,305 @@ public class IndividualesView1 extends javax.swing.JFrame {
         });
         background.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelPechuga.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPechuga.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel2.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel2.setText(" pollo");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, 30));
+        jLabelPollo1.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo1.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo1.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo1.setText(" pollo");
+        jLabelPollo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPechuga.add(jLabelPollo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 40, -1, 30));
 
-        jLabel3.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel3.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel3.setText("Pechuga de");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+        jh2_1.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_1.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_1.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_1.setText("Pechuga de");
+        jh2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPechuga.add(jh2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pechuga.jpg"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelPechuga.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 210, 180));
+        background.add(jPanelPechuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 210, 180));
 
-        jPanel3.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelAlita.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelAlita.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel6.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel6.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel6.setText("Alita de");
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 50));
+        jh2_2.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_2.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_2.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_2.setText("Alita de");
+        jh2_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelAlita.add(jh2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 50));
 
-        jLabel5.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel5.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel5.setText(" pollo");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
+        jLabelPollo2.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo2.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo2.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo2.setText(" pollo");
+        jLabelPollo2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelAlita.add(jLabelPollo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ala.jpg"))); // NOI18N
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelAlita.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 210, 180));
+        background.add(jPanelAlita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 210, 180));
 
-        jPanel12.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelPierna.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPierna.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel7.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel7.setText("Pierna de");
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
+        jh2_3.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_3.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_3.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_3.setText("Pierna de");
+        jh2_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPierna.add(jh2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
-        jLabel8.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel8.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel8.setText(" pollo");
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel12.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
+        jLabelPollo3.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo3.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo3.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo3.setText(" pollo");
+        jLabelPollo3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPierna.add(jLabelPollo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pierna.jpg"))); // NOI18N
-        jPanel12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelPierna.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 210, 180));
+        background.add(jPanelPierna, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 210, 180));
 
-        jPanel8.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelPicantePollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPicantePollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_4.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_4.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_4.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_4.setText("Pollo frito");
+        jh2_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPicantePollo.add(jh2_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
+
+        jLabelPollo4.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo4.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo4.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo4.setText(" picante");
+        jLabelPollo4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPicantePollo.add(jLabelPollo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 90, 30));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pollo_picante.jpg"))); // NOI18N
-        jPanel8.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelPicantePollo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        jLabel14.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel14.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel14.setText("Pollo frito");
-        jLabel14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
+        background.add(jPanelPicantePollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 210, 180));
 
-        jLabel15.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel15.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel15.setText(" picante");
-        jLabel15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 90, 30));
+        jPanelAlitas.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelAlitas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        background.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 210, 180));
+        jh2_5.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_5.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_5.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_5.setText("Alitas de ");
+        jh2_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelAlitas.add(jh2_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
 
-        jPanel9.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabelPollo5.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo5.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo5.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo5.setText(" pollo frito");
+        jLabelPollo5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelAlitas.add(jLabelPollo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, -1));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alitas.jpg"))); // NOI18N
-        jPanel9.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelAlitas.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        jLabel17.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel17.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel17.setText("Alitas de ");
-        jLabel17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel9.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
+        background.add(jPanelAlitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 210, 180));
 
-        jLabel18.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel18.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel18.setText(" pollo frito");
-        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel9.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, -1));
+        jPanelTenders.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelTenders.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        background.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 210, 180));
+        jh2_6.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_6.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_6.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_6.setText("Tenders de");
+        jh2_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelTenders.add(jh2_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
-        jPanel10.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabelPollo6.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo6.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo6.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo6.setText(" pollo frito");
+        jLabelPollo6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelTenders.add(jLabelPollo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tenders.jpg"))); // NOI18N
-        jPanel10.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelTenders.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        jLabel20.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel20.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel20.setText("Tenders de");
-        jLabel20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel10.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
+        background.add(jPanelTenders, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 210, 180));
 
-        jLabel21.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel21.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel21.setText(" pollo frito");
-        jLabel21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel10.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
+        jPanelEnsalda.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelEnsalda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        background.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 210, 180));
+        jh2_7.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_7.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_7.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_7.setText("Ensalada");
+        jh2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelEnsalda.add(jh2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 50));
 
-        jPanel15.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ensalada.jpg"))); // NOI18N
+        jPanelEnsalda.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        jLabel27.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel27.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel27.setText("Coca cola lata");
-        jLabel27.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel15.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, 50));
+        background.add(jPanelEnsalda, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 210, 180));
+
+        jPanelPapasFritas.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPapasFritas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_8.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_8.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_8.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_8.setText("Papas fritas");
+        jh2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPapasFritas.add(jh2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 50));
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/papas_fritas.jpg"))); // NOI18N
+        jPanelPapasFritas.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelPapasFritas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 210, 180));
+
+        jPanelCocaLata.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelCocaLata.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_9.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_9.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_9.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_9.setText("Coca cola lata");
+        jh2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelCocaLata.add(jh2_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, -1, 50));
 
         jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cocalata.jpg"))); // NOI18N
         jLabel37.setToolTipText("");
-        jPanel15.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelCocaLata.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 210, 180));
+        background.add(jPanelCocaLata, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 210, 180));
 
-        jPanel13.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        background.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, -1, -1));
+        jPanelCocaJumbo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelCocaJumbo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel14.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jh2_10.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_10.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_10.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_10.setText("Coca cola ");
+        jh2_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelCocaJumbo.add(jh2_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ensalada.jpg"))); // NOI18N
-        jPanel14.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabelPollo7.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo7.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo7.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo7.setText("yumbo");
+        jLabelPollo7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelCocaJumbo.add(jLabelPollo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
 
-        jLabel23.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel23.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel23.setText("Ensalada");
-        jLabel23.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel14.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cocajumbo.jpg"))); // NOI18N
+        jPanelCocaJumbo.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 210, 180));
+        background.add(jPanelCocaJumbo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 210, 180));
 
-        jPanel16.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        background.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 700, -1, -1));
+        jPanelFrescoCrema.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelFrescoCrema.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel17.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        background.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 700, -1, -1));
+        jh2_11.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_11.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_11.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_11.setText("Fresco de");
+        jh2_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFrescoCrema.add(jh2_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
 
-        jPanel18.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        background.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 700, -1, -1));
+        jLabelPollo8.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo8.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo8.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo8.setText("Crema");
+        jLabelPollo8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelFrescoCrema.add(jLabelPollo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frescocrema.jpg"))); // NOI18N
+        jPanelFrescoCrema.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelFrescoCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 710, 210, 180));
+
+        jPanelPanPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPanPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_12.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_12.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_12.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_12.setText("Pan con pollo");
+        jh2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelPanPollo.add(jh2_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panconpollo.jpg"))); // NOI18N
+        jPanelPanPollo.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelPanPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 710, 210, 180));
+
+        jPanelBurguerPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelBurguerPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_13.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_13.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_13.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_13.setText("Burguer de ");
+        jh2_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelBurguerPollo.add(jh2_13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
+
+        jLabelPollo9.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo9.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo9.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo9.setText(" pollo frito");
+        jLabelPollo9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelBurguerPollo.add(jLabelPollo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/burguer.jpg"))); // NOI18N
+        jPanelBurguerPollo.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelBurguerPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 910, 210, 180));
+
+        jPanelTacosPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelTacosPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_14.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_14.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_14.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_14.setText("Tacos de ");
+        jh2_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelTacosPollo.add(jh2_14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
+
+        jLabelPollo10.setBackground(new java.awt.Color(26, 26, 26));
+        jLabelPollo10.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
+        jLabelPollo10.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelPollo10.setText(" pollo frito");
+        jLabelPollo10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelTacosPollo.add(jLabelPollo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacopollo.jpg"))); // NOI18N
+        jPanelTacosPollo.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelTacosPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 910, 210, 180));
+
+        jPanelSalchipapa.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelSalchipapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jh2_15.setBackground(new java.awt.Color(26, 26, 26));
+        jh2_15.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
+        jh2_15.setForeground(new java.awt.Color(248, 245, 240));
+        jh2_15.setText("Salchipapa");
+        jh2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanelSalchipapa.add(jh2_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 50));
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salchipapa.jpg"))); // NOI18N
+        jPanelSalchipapa.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+
+        background.add(jPanelSalchipapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 910, 210, 180));
 
         jLabel1.setForeground(new java.awt.Color(248, 245, 240));
         jLabel1.setText("jLabel1");
         background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 1110, -1, 40));
-
-        jPanel20.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel32.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel32.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel32.setText("Pan con pollo");
-        jLabel32.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel20.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 50));
-
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panconpollo.jpg"))); // NOI18N
-        jPanel20.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 710, 210, 180));
-
-        jPanel21.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/papas_fritas.jpg"))); // NOI18N
-        jPanel21.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        jLabel25.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel25.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel25.setText("Papas fritas");
-        jLabel25.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel21.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
-
-        background.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 210, 180));
-
-        jPanel22.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel36.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel36.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel36.setText("Salchipapa");
-        jLabel36.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel22.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
-
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salchipapa.jpg"))); // NOI18N
-        jPanel22.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 910, 210, 180));
-
-        jPanel24.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel31.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel31.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel31.setText("Fresco de");
-        jLabel31.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel24.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
-
-        jLabel33.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel33.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel33.setText("Crema");
-        jLabel33.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel24.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
-
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frescocrema.jpg"))); // NOI18N
-        jPanel24.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 710, 210, 180));
-
-        jPanel23.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel28.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel28.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel28.setText("Coca cola ");
-        jLabel28.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel23.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, -1, 50));
-
-        jLabel29.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel29.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel29.setText("yumbo");
-        jLabel29.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel23.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
-
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cocajumbo.jpg"))); // NOI18N
-        jPanel23.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 210, 180));
-
-        jPanel25.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel26.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel26.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel26.setText("Burguer de ");
-        jLabel26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel25.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
-
-        jLabel34.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel34.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel34.setText(" pollo frito");
-        jLabel34.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel25.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
-
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/burguer.jpg"))); // NOI18N
-        jPanel25.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 910, 210, 180));
-
-        jPanel26.setBackground(new java.awt.Color(193, 39, 45));
-        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel30.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel30.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel30.setText("Tacos de ");
-        jLabel30.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel26.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
-
-        jLabel35.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel35.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(248, 245, 240));
-        jLabel35.setText(" pollo frito");
-        jLabel35.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel26.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacopollo.jpg"))); // NOI18N
-        jPanel26.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
-
-        background.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 910, 210, 180));
 
         jScrollPane1.setViewportView(background);
 
@@ -617,31 +628,10 @@ public class IndividualesView1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
@@ -650,33 +640,50 @@ public class IndividualesView1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel jLabelPollo1;
+    private javax.swing.JLabel jLabelPollo10;
+    private javax.swing.JLabel jLabelPollo2;
+    private javax.swing.JLabel jLabelPollo3;
+    private javax.swing.JLabel jLabelPollo4;
+    private javax.swing.JLabel jLabelPollo5;
+    private javax.swing.JLabel jLabelPollo6;
+    private javax.swing.JLabel jLabelPollo7;
+    private javax.swing.JLabel jLabelPollo8;
+    private javax.swing.JLabel jLabelPollo9;
+    private javax.swing.JPanel jPanelAlita;
+    private javax.swing.JPanel jPanelAlitas;
+    private javax.swing.JPanel jPanelBurguerPollo;
+    private javax.swing.JPanel jPanelCocaJumbo;
+    private javax.swing.JPanel jPanelCocaLata;
+    private javax.swing.JPanel jPanelEnsalda;
+    private javax.swing.JPanel jPanelFrescoCrema;
     private javax.swing.JPanel jPanelHeader;
+    private javax.swing.JPanel jPanelPanPollo;
+    private javax.swing.JPanel jPanelPapasFritas;
+    private javax.swing.JPanel jPanelPechuga;
+    private javax.swing.JPanel jPanelPicantePollo;
+    private javax.swing.JPanel jPanelPierna;
+    private javax.swing.JPanel jPanelSalchipapa;
     private javax.swing.JPanel jPanelSalida;
+    private javax.swing.JPanel jPanelTacosPollo;
+    private javax.swing.JPanel jPanelTenders;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jh2_1;
+    private javax.swing.JLabel jh2_10;
+    private javax.swing.JLabel jh2_11;
+    private javax.swing.JLabel jh2_12;
+    private javax.swing.JLabel jh2_13;
+    private javax.swing.JLabel jh2_14;
+    private javax.swing.JLabel jh2_15;
+    private javax.swing.JLabel jh2_2;
+    private javax.swing.JLabel jh2_3;
+    private javax.swing.JLabel jh2_4;
+    private javax.swing.JLabel jh2_5;
+    private javax.swing.JLabel jh2_6;
+    private javax.swing.JLabel jh2_7;
+    private javax.swing.JLabel jh2_8;
+    private javax.swing.JLabel jh2_9;
     private javax.swing.JLabel jlabelLogo;
     private javax.swing.JLabel lblTitulo;
     // End of variables declaration//GEN-END:variables
