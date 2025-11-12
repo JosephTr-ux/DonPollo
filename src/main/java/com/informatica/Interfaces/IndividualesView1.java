@@ -4,6 +4,7 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.ExtraInterfaces.PanelDescripcionDeCompra;
 import com.informatica.clases.CarritoDeCompras;
 import com.informatica.clases.Producto;
 import com.informatica.clases.Usuarios_1;
@@ -24,6 +25,7 @@ public class IndividualesView1 extends javax.swing.JFrame {
      */
     private CarritoDeCompras carrito = new CarritoDeCompras();
     private Producto producto;
+    private PanelDescripcionDeCompra opcUsuario;
     private  CargarTipografias tipoFuente;
     private int xMouse,yMouse;
     public IndividualesView1() {
@@ -729,67 +731,97 @@ public class IndividualesView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCarritoMouseClicked
 
     private void jPanelPechugaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPechugaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(1);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPechugaMouseClicked
 
     private void jPanelAlitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(2);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitaMouseClicked
 
     private void jPanelPiernaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPiernaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(3);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPiernaMouseClicked
 
     private void jPanelPicantePolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPicantePolloMouseClicked
-        mostrarVentanaProducto();        
+        opcUsuario = new PanelDescripcionDeCompra(4);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPicantePolloMouseClicked
 
     private void jPanelAlitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitasMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(5);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitasMouseClicked
 
     private void jPanelTendersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTendersMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(6);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelTendersMouseClicked
 
     private void jPanelEnsaladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelEnsaladaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(7);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelEnsaladaMouseClicked
 
     private void jPanelPapasFritasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPapasFritasMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(8);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPapasFritasMouseClicked
 
     private void jPanelCocaLataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelCocaLataMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(9);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelCocaLataMouseClicked
 
     private void jPanelCocaJumboMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelCocaJumboMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(10);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelCocaJumboMouseClicked
 
     private void jPanelFrescoCremaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelFrescoCremaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(11);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelFrescoCremaMouseClicked
 
     private void jPanelPanPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPanPolloMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(12);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPanPolloMouseClicked
 
     private void jPanelBurguerPolloKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanelBurguerPolloKeyPressed
-        // TODO add your handling code here:
+        // Me equivoque de click xd
     }//GEN-LAST:event_jPanelBurguerPolloKeyPressed
 
     private void jPanelBurguerPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelBurguerPolloMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(13);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelBurguerPolloMouseClicked
 
     private void jPanelTacosPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTacosPolloMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(14);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelTacosPolloMouseClicked
 
     private void jPanelSalchipapaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSalchipapaMouseClicked
-        mostrarVentanaProducto();
+        opcUsuario = new PanelDescripcionDeCompra(15);
+        opcUsuario.setVisible(true);
+        opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelSalchipapaMouseClicked
 
     
@@ -829,40 +861,6 @@ public class IndividualesView1 extends javax.swing.JFrame {
         });
     }
     
-    private void mostrarVentanaProducto() {
-    JDialog dialog = new JDialog(this, "Detalles del Producto", true);
-    dialog.setSize(350, 220);
-    dialog.setLocationRelativeTo(null);
-
-    JPanel panel = new JPanel();
-    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-    panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
-
-    JLabel lblPrecio = new JLabel("Precio: Q" + producto.getPrecio());
-    JLabel lblDesc = new JLabel("<html>Descripción: " + producto.getDescripcion() + "</html>");
-
-    lblPrecio.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-    lblDesc.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-
-    JButton btnAgregar = new JButton("Agregar al carrito");
-    JButton btnCancelar = new JButton("Cancelar");
-
-    btnAgregar.addActionListener(e -> {
-        carrito.agregarProducto(producto); // usa tu clase CarritoDeCompras
-        JOptionPane.showMessageDialog(dialog, "Producto agregado al carrito ");
-        dialog.dispose();
-    });
-
-    btnCancelar.addActionListener(e -> dialog.dispose());
-
-    panel.add(lblPrecio);
-    panel.add(lblDesc);
-    panel.add(Box.createVerticalStrut(10));
-    panel.add(btnAgregar);
-    panel.add(btnCancelar);
-
-    dialog.add(panel);
-    dialog.setVisible(true);}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;

@@ -4,6 +4,10 @@
  */
 package com.informatica.ExtraInterfaces;
 
+import com.informatica.DatosModel.DatosDeProducto;
+import com.informatica.Interfaces.CargarTipografias;
+import com.informatica.clases.Producto;
+
 /**
  *
  * @author Temporal
@@ -14,9 +18,40 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
      * Creates new form PanelDescripcion
      */
     private int xMouse,yMouse;
+    private CargarTipografias tipoFuente = new CargarTipografias();
+
     public PanelDescripcionDeCompra() {
-        setUndecorated(false);
+        setUndecorated(true);
         initComponents();
+        
+        btnAddCarrito.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 24));
+        txtPrecio.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,28));
+        txtDescripcion.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0, 29));
+        
+        lblPrecio.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,24));
+        
+    }
+    
+    
+    
+    public PanelDescripcionDeCompra(int opcionCliente) {
+        this();
+        /*
+        Crea una clase de DatosDeProducto para que posteriormente mande la consulta SQL
+        y luego crear una clase tipo Producto y acceder a los valores
+        */
+        DatosDeProducto productoSQL = new DatosDeProducto();
+        Producto producto_normal = productoSQL.encontrarProducto(opcionCliente);
+        
+        if(producto_normal != null){
+            if(producto_normal.getCantidad() >= 1){
+                txtDescripcion.setText(String.valueOf(producto_normal.getDescripcion()));
+                txtPrecio.setText(String.valueOf(producto_normal.getPrecio()));
+            }else{
+                txtPrecio.setText("Agotado");
+            }
+        }
+        
     }
 
     /**
@@ -28,17 +63,23 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PanelContenedor = new javax.swing.JPanel();
         BarraMovible = new javax.swing.JPanel();
         btnSalir = new javax.swing.JLabel();
         btnMinimizar = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        lblPrecio = new javax.swing.JLabel();
+        txtPrecio = new javax.swing.JLabel();
+        txtDescripcion = new javax.swing.JLabel();
+        btnAddCarrito = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelContenedor.setBackground(new java.awt.Color(248, 245, 240));
+        PanelContenedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(73, 49, 44), 4));
+        PanelContenedor.setVerifyInputWhenFocusTarget(false);
+        PanelContenedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BarraMovible.setBackground(new java.awt.Color(73, 49, 44));
         BarraMovible.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -78,40 +119,44 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         });
         BarraMovible.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 14, -1, -1));
 
-        getContentPane().add(BarraMovible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 40));
+        PanelContenedor.add(BarraMovible, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 40));
 
         Background.setBackground(new java.awt.Color(248, 245, 240));
+        Background.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(73, 49, 44), 3));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel1.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel1.setText("Precio:");
-        Background.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+        lblPrecio.setBackground(new java.awt.Color(26, 26, 26));
+        lblPrecio.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
+        lblPrecio.setForeground(new java.awt.Color(26, 26, 26));
+        lblPrecio.setText("Precio:");
+        Background.add(lblPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, -1, -1));
 
-        jLabel2.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 28)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel2.setText("Q.00.00");
-        jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Background.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 80, 50));
+        txtPrecio.setBackground(new java.awt.Color(26, 26, 26));
+        txtPrecio.setFont(new java.awt.Font("Bebas Neue", 0, 28)); // NOI18N
+        txtPrecio.setForeground(new java.awt.Color(26, 26, 26));
+        txtPrecio.setText("Q.00.00");
+        txtPrecio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Background.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 120, 50));
 
-        jLabel3.setBackground(new java.awt.Color(26, 26, 26));
-        jLabel3.setFont(new java.awt.Font("Bebas Neue", 0, 29)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel3.setText("Paquete de Alitas de Pollo Fritas");
-        jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Background.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
+        txtDescripcion.setBackground(new java.awt.Color(26, 26, 26));
+        txtDescripcion.setFont(new java.awt.Font("Bebas Neue", 0, 29)); // NOI18N
+        txtDescripcion.setForeground(new java.awt.Color(26, 26, 26));
+        txtDescripcion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtDescripcion.setText("Ensalada");
+        txtDescripcion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Background.add(txtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 10, 340, 50));
 
-        jButton1.setBackground(new java.awt.Color(255, 211, 61));
-        jButton1.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(26, 26, 26));
-        jButton1.setText("Agregar al Carrito");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 245, 240), 1, true));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 170, 40));
+        btnAddCarrito.setBackground(new java.awt.Color(255, 211, 61));
+        btnAddCarrito.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
+        btnAddCarrito.setForeground(new java.awt.Color(26, 26, 26));
+        btnAddCarrito.setText("Agregar al Carrito");
+        btnAddCarrito.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 245, 240), 1, true));
+        btnAddCarrito.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Background.add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 170, 40));
 
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 350, 160));
+        PanelContenedor.add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 360, 160));
+
+        getContentPane().add(PanelContenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 359, 200));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,7 +173,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     }//GEN-LAST:event_BarraMovibleMousePressed
 
     private void btnSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseClicked
-        System.exit(0);
+        dispose();
     }//GEN-LAST:event_btnSalirMouseClicked
 
     private void btnSalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalirMouseEntered
@@ -182,11 +227,12 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JPanel BarraMovible;
+    private javax.swing.JPanel PanelContenedor;
+    private javax.swing.JButton btnAddCarrito;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblPrecio;
+    private javax.swing.JLabel txtDescripcion;
+    private javax.swing.JLabel txtPrecio;
     // End of variables declaration//GEN-END:variables
 }
