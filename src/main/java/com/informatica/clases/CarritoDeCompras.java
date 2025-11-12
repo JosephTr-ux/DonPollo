@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class CarritoDeCompras {
         //Atributos
     private ArrayList<Producto> nomProductos = new ArrayList<>();
-    private Usuarios user;
+    private Usuarios_1 user;
     private float total;
 
     //Constructores
@@ -21,7 +21,7 @@ public class CarritoDeCompras {
         this.nomProductos = nomProductos;
     }
 
-    public CarritoDeCompras(Usuarios user) {
+    public CarritoDeCompras(Usuarios_1 user) {
         this.user = user;
     }
 
@@ -33,11 +33,11 @@ public class CarritoDeCompras {
         this.nomProductos = nomProductos;
     }
 
-    public Usuarios getUser() {
+    public Usuarios_1 getUser() {
         return user;
     }
 
-    public void setUser(Usuarios user) {
+    public void setUser(Usuarios_1 user) {
         this.user = user;
     }
 
@@ -89,7 +89,7 @@ public class CarritoDeCompras {
     public void mostrarCarrito() {
         System.out.println("Productos en el carrito:");
         for (int i = 0;i<this.nomProductos.size();i++) {
-            nomProductos.get(i).getNombre();
+            nomProductos.get(i).getDescripcion();
             nomProductos.get(i).mostrarInformacion();
             System.out.println("----------------------");
         }

@@ -1,6 +1,5 @@
 package com.informatica.pollofrito;
 
-import com.informatica.Interfaces.IndividualesView;
 import com.informatica.Interfaces.IndividualesView1;
 import com.informatica.Interfaces.MenuOpciones;
 import java.util.ArrayList;
@@ -10,12 +9,13 @@ import com.informatica.clases.*;
 
 public class PolloFrito {
     //Clase para contener todos los usuarios y productos
+    /*
     static UsuariosExistentes usersTodos = new UsuariosExistentes();
     static ProductosExistentes productosExistentes = new ProductosExistentes();
     static CarritoDeCompras carroOrden;
     static DireccionDeEnvio direccionActual;
     static ArrayList<Cupones> listCupones = new ArrayList<>();
-
+    */
 
     public static void sleep(int n) {
         try {
@@ -70,8 +70,9 @@ public class PolloFrito {
         } else System.out.println("No has elegido nada");
 */
     }
+}
 
-    public static boolean inicioSesion() {
+   /* public static boolean inicioSesion() {
 
         Scanner scanner = new Scanner(System.in);
         String passw, nombre;
@@ -357,5 +358,4 @@ public class PolloFrito {
         }
 
     }
-
-}
+*/

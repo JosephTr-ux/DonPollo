@@ -1,32 +1,32 @@
 package com.informatica.ProductsOnStock;
 
-import com.informatica.clases.Usuarios;
+import com.informatica.clases.Usuarios_1;
 import java.util.ArrayList;
 
 public class UsuariosExistentes {
-    private ArrayList<Usuarios> users;
-    private Usuarios usuarioActual;
+    private ArrayList<Usuarios_1> users;
+    private Usuarios_1 usuarioActual;
 
     public UsuariosExistentes() {
         users = new ArrayList<>();
         usuarioActual = null;
        //Usuarios para las pruebas
-        users.add(new Usuarios("dylanMatta","dylanM@gmail.com",19220911, "123456"));
-        users.add(new Usuarios("cliente1","clientehabitual@gmail.com",83921038 ,"password"));
-        users.add(new Usuarios("juan","juan90@gmail.com",90223812,"mipass"));
+        users.add(new Usuarios_1("dylanMatta","dylanM@gmail.com",19220911, "123456"));
+        users.add(new Usuarios_1("cliente1","clientehabitual@gmail.com",83921038 ,"password"));
+        users.add(new Usuarios_1("juan","juan90@gmail.com",90223812,"mipass"));
     }
 
 
-    public void setUsuarioActual(Usuarios usuarioActual) {
+    public void setUsuarioActual(Usuarios_1 usuarioActual) {
         this.usuarioActual = usuarioActual;
     }
 
-    public Usuarios getUsuarioActual() {
+    public Usuarios_1 getUsuarioActual() {
         return usuarioActual;
     }
 
     public boolean iniciarSesion(String nombre, String password) {
-        for (Usuarios usuarios : users) {
+        for (Usuarios_1 usuarios : users) {
             if (usuarios.getNombre().equals(nombre) && usuarios.getPass().equals(password)) {
                 System.out.println("Bienvenido " + nombre + "!");
                 setUsuarioActual(usuarios);
@@ -43,7 +43,7 @@ public class UsuariosExistentes {
     }
 
     public void registrarUsuario(String nombre, String email, int noTelefono, String passw) {
-        Usuarios nuevoUsuario = new Usuarios(nombre, email,noTelefono,passw);
+        Usuarios_1 nuevoUsuario = new Usuarios_1(nombre, email,noTelefono,passw);
         users.add(nuevoUsuario);
         System.out.println("Usuario " + nombre + " registrado exitosamente");
     }

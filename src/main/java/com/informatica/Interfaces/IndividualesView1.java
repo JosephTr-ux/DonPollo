@@ -4,6 +4,13 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.clases.CarritoDeCompras;
+import com.informatica.clases.Producto;
+import com.informatica.clases.Usuarios_1;
+import java.awt.Component;
+import java.awt.Font;
+import javax.swing.*;
+
 
 
 /**
@@ -15,9 +22,12 @@ public class IndividualesView1 extends javax.swing.JFrame {
     /**
      * Creates new form IndividualesView
      */
-    CargarTipografias tipoFuente;
-    int xMouse,yMouse;
+    private CarritoDeCompras carrito = new CarritoDeCompras();
+    private Producto producto;
+    private  CargarTipografias tipoFuente;
+    private int xMouse,yMouse;
     public IndividualesView1() {
+        this.producto = new Producto();
         setUndecorated(true);
         initComponents();
         tipoFuente = new CargarTipografias();
@@ -99,7 +109,7 @@ public class IndividualesView1 extends javax.swing.JFrame {
         jh2_6 = new javax.swing.JLabel();
         jLabelPollo6 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        jPanelEnsalda = new javax.swing.JPanel();
+        jPanelEnsalada = new javax.swing.JPanel();
         jh2_7 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jPanelPapasFritas = new javax.swing.JPanel();
@@ -190,6 +200,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
 
         btnCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrito.png"))); // NOI18N
         btnCarrito.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCarrito.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCarritoMouseClicked(evt);
+            }
+        });
         jPanelHeader.add(btnCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
 
         btnMenu.setBackground(new java.awt.Color(255, 211, 61));
@@ -230,6 +245,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
 
         jPanelPechuga.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPechuga.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelPechugaMouseClicked(evt);
+            }
+        });
         jPanelPechuga.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelPollo1.setBackground(new java.awt.Color(26, 26, 26));
@@ -252,6 +272,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelPechuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 210, 180));
 
         jPanelAlita.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelAlita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelAlitaMouseClicked(evt);
+            }
+        });
         jPanelAlita.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_2.setBackground(new java.awt.Color(26, 26, 26));
@@ -274,6 +299,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelAlita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 210, 180));
 
         jPanelPierna.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPierna.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelPiernaMouseClicked(evt);
+            }
+        });
         jPanelPierna.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_3.setBackground(new java.awt.Color(26, 26, 26));
@@ -296,6 +326,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelPierna, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 210, 180));
 
         jPanelPicantePollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPicantePollo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelPicantePolloMouseClicked(evt);
+            }
+        });
         jPanelPicantePollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_4.setBackground(new java.awt.Color(26, 26, 26));
@@ -318,6 +353,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelPicantePollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 210, 180));
 
         jPanelAlitas.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelAlitas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelAlitasMouseClicked(evt);
+            }
+        });
         jPanelAlitas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_5.setBackground(new java.awt.Color(26, 26, 26));
@@ -340,6 +380,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelAlitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 210, 180));
 
         jPanelTenders.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelTenders.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTendersMouseClicked(evt);
+            }
+        });
         jPanelTenders.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_6.setBackground(new java.awt.Color(26, 26, 26));
@@ -361,22 +406,32 @@ public class IndividualesView1 extends javax.swing.JFrame {
 
         background.add(jPanelTenders, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 210, 180));
 
-        jPanelEnsalda.setBackground(new java.awt.Color(193, 39, 45));
-        jPanelEnsalda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelEnsalada.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelEnsalada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelEnsaladaMouseClicked(evt);
+            }
+        });
+        jPanelEnsalada.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_7.setBackground(new java.awt.Color(26, 26, 26));
         jh2_7.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
         jh2_7.setForeground(new java.awt.Color(248, 245, 240));
         jh2_7.setText("Ensalada");
         jh2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanelEnsalda.add(jh2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 50));
+        jPanelEnsalada.add(jh2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 50));
 
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ensalada.jpg"))); // NOI18N
-        jPanelEnsalda.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelEnsalada.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
-        background.add(jPanelEnsalda, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 210, 180));
+        background.add(jPanelEnsalada, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 210, 180));
 
         jPanelPapasFritas.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPapasFritas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelPapasFritasMouseClicked(evt);
+            }
+        });
         jPanelPapasFritas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_8.setBackground(new java.awt.Color(26, 26, 26));
@@ -392,6 +447,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelPapasFritas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 210, 180));
 
         jPanelCocaLata.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelCocaLata.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelCocaLataMouseClicked(evt);
+            }
+        });
         jPanelCocaLata.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_9.setBackground(new java.awt.Color(26, 26, 26));
@@ -408,6 +468,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelCocaLata, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 210, 180));
 
         jPanelCocaJumbo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelCocaJumbo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelCocaJumboMouseClicked(evt);
+            }
+        });
         jPanelCocaJumbo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_10.setBackground(new java.awt.Color(26, 26, 26));
@@ -430,6 +495,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelCocaJumbo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 210, 180));
 
         jPanelFrescoCrema.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelFrescoCrema.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelFrescoCremaMouseClicked(evt);
+            }
+        });
         jPanelFrescoCrema.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_11.setBackground(new java.awt.Color(26, 26, 26));
@@ -452,6 +522,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelFrescoCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 710, 210, 180));
 
         jPanelPanPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelPanPollo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelPanPolloMouseClicked(evt);
+            }
+        });
         jPanelPanPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_12.setBackground(new java.awt.Color(26, 26, 26));
@@ -467,6 +542,16 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelPanPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 710, 210, 180));
 
         jPanelBurguerPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelBurguerPollo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelBurguerPolloMouseClicked(evt);
+            }
+        });
+        jPanelBurguerPollo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPanelBurguerPolloKeyPressed(evt);
+            }
+        });
         jPanelBurguerPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_13.setBackground(new java.awt.Color(26, 26, 26));
@@ -489,6 +574,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelBurguerPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 910, 210, 180));
 
         jPanelTacosPollo.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelTacosPollo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelTacosPolloMouseClicked(evt);
+            }
+        });
         jPanelTacosPollo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_14.setBackground(new java.awt.Color(26, 26, 26));
@@ -511,6 +601,11 @@ public class IndividualesView1 extends javax.swing.JFrame {
         background.add(jPanelTacosPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 910, 210, 180));
 
         jPanelSalchipapa.setBackground(new java.awt.Color(193, 39, 45));
+        jPanelSalchipapa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanelSalchipapaMouseClicked(evt);
+            }
+        });
         jPanelSalchipapa.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jh2_15.setBackground(new java.awt.Color(26, 26, 26));
@@ -582,6 +677,123 @@ public class IndividualesView1 extends javax.swing.JFrame {
         setVisible(false);
     }//GEN-LAST:event_lblTituloMouseClicked
 
+    private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
+        Usuarios_1 usuario = new Usuarios_1();
+        
+        JFrame frameUsuario = new JFrame("Datos del Usuario");
+        frameUsuario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frameUsuario.setSize(400, 400);
+        frameUsuario.setLocationRelativeTo(null);
+        
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+        
+        JLabel lblTitulo1 = new JLabel("Información del Usuario");
+        lblTitulo1.setFont(new Font("Segoe UI", Font.BOLD, 20));
+        lblTitulo1.setAlignmentX(Component.CENTER_ALIGNMENT);
+        panel.add(lblTitulo1);
+        panel.add(Box.createVerticalStrut(20));
+        
+        JLabel lblNombre = new JLabel("Nombre: " + usuario.getNombre());
+        JLabel lblCorreo = new JLabel("Correo: " + usuario.getEmail());
+        JLabel lblTelefono = new JLabel("Teléfono: " + usuario.getNumeroTelefono());
+        JLabel lblDireccion = new JLabel("Dirección: " + usuario.getDeEnvio());
+
+         lblNombre.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+        lblCorreo.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+        lblTelefono.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+        lblDireccion.setFont(new Font("Segoe UI", Font.PLAIN, 16));
+
+        panel.add(lblNombre);
+        panel.add(lblCorreo);
+        panel.add(lblTelefono);
+        panel.add(lblDireccion);
+        panel.add(Box.createVerticalGlue());
+
+        JButton btnRegresar = new JButton("← Regresar");
+        btnRegresar.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btnRegresar.addActionListener(e -> {
+        frameUsuario.dispose(); 
+        this.setVisible(true);  
+    });
+
+        panel.add(Box.createVerticalStrut(20));
+        panel.add(btnRegresar);
+
+        frameUsuario.add(panel);
+        frameUsuario.setVisible(true);
+
+    
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnCarritoMouseClicked
+
+    private void jPanelPechugaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPechugaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelPechugaMouseClicked
+
+    private void jPanelAlitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelAlitaMouseClicked
+
+    private void jPanelPiernaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPiernaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelPiernaMouseClicked
+
+    private void jPanelPicantePolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPicantePolloMouseClicked
+        mostrarVentanaProducto();        
+    }//GEN-LAST:event_jPanelPicantePolloMouseClicked
+
+    private void jPanelAlitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitasMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelAlitasMouseClicked
+
+    private void jPanelTendersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTendersMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelTendersMouseClicked
+
+    private void jPanelEnsaladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelEnsaladaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelEnsaladaMouseClicked
+
+    private void jPanelPapasFritasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPapasFritasMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelPapasFritasMouseClicked
+
+    private void jPanelCocaLataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelCocaLataMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelCocaLataMouseClicked
+
+    private void jPanelCocaJumboMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelCocaJumboMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelCocaJumboMouseClicked
+
+    private void jPanelFrescoCremaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelFrescoCremaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelFrescoCremaMouseClicked
+
+    private void jPanelPanPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPanPolloMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelPanPolloMouseClicked
+
+    private void jPanelBurguerPolloKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPanelBurguerPolloKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelBurguerPolloKeyPressed
+
+    private void jPanelBurguerPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelBurguerPolloMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelBurguerPolloMouseClicked
+
+    private void jPanelTacosPolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTacosPolloMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelTacosPolloMouseClicked
+
+    private void jPanelSalchipapaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelSalchipapaMouseClicked
+        mostrarVentanaProducto();
+    }//GEN-LAST:event_jPanelSalchipapaMouseClicked
+
+    
     /**
      * @param args the command line arguments
      */
@@ -617,6 +829,41 @@ public class IndividualesView1 extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void mostrarVentanaProducto() {
+    JDialog dialog = new JDialog(this, "Detalles del Producto", true);
+    dialog.setSize(350, 220);
+    dialog.setLocationRelativeTo(null);
+
+    JPanel panel = new JPanel();
+    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+    panel.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
+
+    JLabel lblPrecio = new JLabel("Precio: Q" + producto.getPrecio());
+    JLabel lblDesc = new JLabel("<html>Descripción: " + producto.getDescripcion() + "</html>");
+
+    lblPrecio.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+    lblDesc.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+
+    JButton btnAgregar = new JButton("Agregar al carrito");
+    JButton btnCancelar = new JButton("Cancelar");
+
+    btnAgregar.addActionListener(e -> {
+        carrito.agregarProducto(producto); // usa tu clase CarritoDeCompras
+        JOptionPane.showMessageDialog(dialog, "Producto agregado al carrito ");
+        dialog.dispose();
+    });
+
+    btnCancelar.addActionListener(e -> dialog.dispose());
+
+    panel.add(lblPrecio);
+    panel.add(lblDesc);
+    panel.add(Box.createVerticalStrut(10));
+    panel.add(btnAgregar);
+    panel.add(btnCancelar);
+
+    dialog.add(panel);
+    dialog.setVisible(true);}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
@@ -656,7 +903,7 @@ public class IndividualesView1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelBurguerPollo;
     private javax.swing.JPanel jPanelCocaJumbo;
     private javax.swing.JPanel jPanelCocaLata;
-    private javax.swing.JPanel jPanelEnsalda;
+    private javax.swing.JPanel jPanelEnsalada;
     private javax.swing.JPanel jPanelFrescoCrema;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelPanPollo;

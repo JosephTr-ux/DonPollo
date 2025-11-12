@@ -7,54 +7,55 @@ import java.util.ArrayList;
 
 public class Producto {
 
-    private String nombre;
-    private float precio;
-    private boolean onStock;
+    
+    private int id_producto;
+    private double precio;
+    private int cantidad;
     private String descripcion;
     private ArrayList<Producto> productosIncluido;
 
-
-    public Producto(String nombre, float precio, String descripcion,boolean onStock) {
-        this.nombre = nombre;
+    public Producto(int id_producto, double precio, int cantidad, String descripcion) {
+        this.id_producto = id_producto;
         this.precio = precio;
+        this.cantidad = cantidad;
         this.descripcion = descripcion;
-        this.onStock = true;
     }
 
-    public Producto(String nombre,  float precio, String descripcion,ArrayList<Producto> productosIncluido) {
-        this.nombre = nombre;
+    public Producto(int id_producto, double precio, int cantidad, String descripcion, ArrayList<Producto> productosIncluido) {
+        this.id_producto = id_producto;
         this.precio = precio;
+        this.cantidad = cantidad;
         this.descripcion = descripcion;
         this.productosIncluido = productosIncluido;
     }
 
-
-    public String getNombre() {
-        return nombre;
+    public Producto() {
+    }
+    
+    
+    
+    public int getId_producto() {
+        return id_producto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setId_producto(int id_producto) {
+        this.id_producto = id_producto;
     }
 
-    public float getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public boolean getOnStock() {
-        return onStock;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setOnStock(boolean onStock) {
-        this.onStock = onStock;
-    }
-
-    public boolean isOnStock() {
-        return onStock;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
     public String getDescripcion() {
@@ -72,9 +73,12 @@ public class Producto {
     public void setProductosIncluido(ArrayList<Producto> productosIncluido) {
         this.productosIncluido = productosIncluido;
     }
-
+    
+    
+    
+   
     public void mostrarInformacion() {
-        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Nombre: " + this.descripcion);
         System.out.println("Precio: Q" + this.precio);
         System.out.println("Descripcion: " + this.descripcion);
     }

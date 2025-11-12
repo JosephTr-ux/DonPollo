@@ -348,7 +348,7 @@ public class MenuOpciones extends javax.swing.JFrame {
     }//GEN-LAST:event_promo_bckgMouseClicked
 
     private void indi_bckgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_indi_bckgMouseClicked
-        IndividualesView indiMenu = new IndividualesView();
+        IndividualesView1 indiMenu = new IndividualesView1();
         indiMenu.setVisible(true);
         indiMenu.setLocationRelativeTo(null);
         setVisible(false);

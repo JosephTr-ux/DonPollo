@@ -15,12 +15,12 @@ public class DireccionDeEnvio {
     private String Ciudad;
     private int CodigoPostal;
     private String colonia;
-    private Usuarios userActual;
+    private Usuarios_1 userActual;
 
     public DireccionDeEnvio() {
     }
 
-    public DireccionDeEnvio(Usuarios userActual) {
+    public DireccionDeEnvio(Usuarios_1 userActual) {
         this.userActual = userActual;
     }
 
@@ -59,11 +59,11 @@ public class DireccionDeEnvio {
         return colonia;
     }
 
-    public Usuarios getUserActual() {
+    public Usuarios_1 getUserActual() {
         return userActual;
     }
 
-    public void setUserActual(Usuarios userActual) {
+    public void setUserActual(Usuarios_1 userActual) {
         this.userActual = userActual;
     }
 
