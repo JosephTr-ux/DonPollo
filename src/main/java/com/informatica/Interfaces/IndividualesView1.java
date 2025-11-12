@@ -27,7 +27,6 @@ public class IndividualesView1 extends javax.swing.JFrame {
     private  CargarTipografias tipoFuente;
     private int xMouse,yMouse;
     public IndividualesView1() {
-        this.producto = new Producto();
         setUndecorated(true);
         initComponents();
         tipoFuente = new CargarTipografias();

@@ -6,34 +6,18 @@ package com.informatica.clases;
 import java.util.ArrayList;
 
 public class Producto {
-
-    
     private int id_producto;
-    private double precio;
+    private float precio;
     private int cantidad;
     private String descripcion;
-    private ArrayList<Producto> productosIncluido;
 
-    public Producto(int id_producto, double precio, int cantidad, String descripcion) {
+    public Producto(int id_producto, float precio, int cantidad, String descripcion) {
         this.id_producto = id_producto;
         this.precio = precio;
         this.cantidad = cantidad;
         this.descripcion = descripcion;
     }
 
-    public Producto(int id_producto, double precio, int cantidad, String descripcion, ArrayList<Producto> productosIncluido) {
-        this.id_producto = id_producto;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.descripcion = descripcion;
-        this.productosIncluido = productosIncluido;
-    }
-
-    public Producto() {
-    }
-    
-    
-    
     public int getId_producto() {
         return id_producto;
     }
@@ -42,11 +26,11 @@ public class Producto {
         this.id_producto = id_producto;
     }
 
-    public double getPrecio() {
+    public float getPrecio() {
         return precio;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(float precio) {
         this.precio = precio;
     }
 
@@ -65,22 +49,8 @@ public class Producto {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    public ArrayList<Producto> getProductosIncluido() {
-        return productosIncluido;
-    }
-
-    public void setProductosIncluido(ArrayList<Producto> productosIncluido) {
-        this.productosIncluido = productosIncluido;
-    }
     
     
     
-   
-    public void mostrarInformacion() {
-        System.out.println("Nombre: " + this.descripcion);
-        System.out.println("Precio: Q" + this.precio);
-        System.out.println("Descripcion: " + this.descripcion);
-    }
 }
 

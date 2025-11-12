@@ -4,7 +4,7 @@
  */
 package com.informatica.Interfaces;
 
-import com.informatica.clases.DatosDelUsuario;
+import com.informatica.DatosModel.DatosDelUsuario;
 import com.informatica.clases.Usuarios_1;
 import java.awt.Color;
 import javax.swing.JOptionPane;

@@ -4,7 +4,6 @@ import com.informatica.Interfaces.IndividualesView1;
 import com.informatica.Interfaces.MenuOpciones;
 import java.util.ArrayList;
 import java.util.Scanner;
-import com.informatica.ProductsOnStock.*;
 import com.informatica.clases.*;
 
 public class PolloFrito {

@@ -90,7 +90,6 @@ public class CarritoDeCompras {
         System.out.println("Productos en el carrito:");
         for (int i = 0;i<this.nomProductos.size();i++) {
             nomProductos.get(i).getDescripcion();
-            nomProductos.get(i).mostrarInformacion();
             System.out.println("----------------------");
         }
         System.out.println("Total a pagar: Q"+total()+".");
@@ -99,7 +98,6 @@ public class CarritoDeCompras {
     public void mostrarProductos(){
         System.out.println("Productos en el carrito:");
         for (Producto producto : nomProductos) {
-            producto.mostrarInformacion();
             System.out.println("----------------------");
         }
     }

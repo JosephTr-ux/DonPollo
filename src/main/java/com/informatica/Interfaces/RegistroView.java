@@ -4,7 +4,7 @@
  */
 package com.informatica.Interfaces;
 
-import com.informatica.clases.DatosDelUsuario;
+import com.informatica.DatosModel.DatosDelUsuario;
 import java.awt.Color;
 import com.informatica.clases.Usuarios_1;
 /**
