@@ -4,7 +4,7 @@
  */
 package com.informatica.Interfaces;
 
-import com.informatica.ExtraInterfaces.PanelDescripcionDeCompra;
+import com.informatica.VentanasEmergentes.PanelDescripcionDeCompra;
 import com.informatica.clases.CarritoDeCompras;
 import com.informatica.clases.Producto;
 import com.informatica.clases.Usuarios_1;
