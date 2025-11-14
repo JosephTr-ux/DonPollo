@@ -26,6 +26,7 @@ public class Conexion {
             conn = DriverManager.getConnection(sURL, user, pass);
         }
         catch(SQLException ex){
+            JOptionPane.showMessageDialog(null,"Error al conectar con la base de datos","Error", 0);
         }
         return conn;
     }

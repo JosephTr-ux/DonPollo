@@ -45,7 +45,6 @@ public class DatosDelUsuario {
                 ResultSet resultSet = ps.executeQuery();
                 return true;
         } catch (SQLException e) {
-            e.printStackTrace();
             return false;
         }
     }
