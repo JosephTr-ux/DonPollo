@@ -5,11 +5,13 @@ C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\inform
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\clases\Producto.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\clases\Usuarios_1.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\DatosModel\Conexion.java
+C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\DatosModel\CuponesDatos.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\DatosModel\DatosDelUsuario.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\DatosModel\DatosDeProducto.java
-C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\ExtraInterfaces\PanelDescripcionDeCompra.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\CargarTipografias.java
+C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\CarritoCompras.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\CombosView.java
+C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\CuponesView.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\IndividualesView1.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\LoginView.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\MenuMain.java
@@ -18,3 +20,4 @@ C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\inform
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\PromosView.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\Interfaces\RegistroView.java
 C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\pollofrito\PolloFrito.java
+C:\Users\Temporal\Documents\NetBeansProjects\PolloFrito\src\main\java\com\informatica\VentanasEmergentes\PanelDescripcionDeCompra.java

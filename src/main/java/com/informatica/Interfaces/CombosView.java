@@ -62,6 +62,10 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo9.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
         jLabelPollo10.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
         
+        // Asignacion de tamaños a imagenes
+                                //nombre label  y nombre imagen
+         setImageLabel(jLabel2,"src/main/resources/combo1.jpg");
+        
     }
 
     /**
@@ -87,58 +91,58 @@ public class CombosView extends javax.swing.JFrame {
         jPanelPechuga = new javax.swing.JPanel();
         jLabelPollo1 = new javax.swing.JLabel();
         jh2_1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jPanelAlita = new javax.swing.JPanel();
         jh2_2 = new javax.swing.JLabel();
         jLabelPollo2 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanelPierna = new javax.swing.JPanel();
         jh2_3 = new javax.swing.JLabel();
         jLabelPollo3 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanelPicantePollo = new javax.swing.JPanel();
         jh2_4 = new javax.swing.JLabel();
         jLabelPollo4 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanelAlitas = new javax.swing.JPanel();
         jh2_5 = new javax.swing.JLabel();
         jLabelPollo5 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jPanelTenders = new javax.swing.JPanel();
         jh2_6 = new javax.swing.JLabel();
         jLabelPollo6 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanelEnsalada = new javax.swing.JPanel();
         jh2_7 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jPanelPapasFritas = new javax.swing.JPanel();
         jh2_8 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanelCocaLata = new javax.swing.JPanel();
         jh2_9 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jPanelCocaJumbo = new javax.swing.JPanel();
         jh2_10 = new javax.swing.JLabel();
         jLabelPollo7 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanelFrescoCrema = new javax.swing.JPanel();
         jh2_11 = new javax.swing.JLabel();
         jLabelPollo8 = new javax.swing.JLabel();
-        jLabel39 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanelPanPollo = new javax.swing.JPanel();
         jh2_12 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanelBurguerPollo = new javax.swing.JPanel();
         jh2_13 = new javax.swing.JLabel();
         jLabelPollo9 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
         jPanelTacosPollo = new javax.swing.JPanel();
         jh2_14 = new javax.swing.JLabel();
         jLabelPollo10 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
         jPanelSalchipapa = new javax.swing.JPanel();
         jh2_15 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -254,19 +258,17 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo1.setBackground(new java.awt.Color(26, 26, 26));
         jLabelPollo1.setFont(new java.awt.Font("Lobster", 0, 28)); // NOI18N
         jLabelPollo1.setForeground(new java.awt.Color(248, 245, 240));
-        jLabelPollo1.setText(" pollo");
+        jLabelPollo1.setText("Clásico");
         jLabelPollo1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelPechuga.add(jLabelPollo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 40, -1, 30));
 
         jh2_1.setBackground(new java.awt.Color(26, 26, 26));
         jh2_1.setFont(new java.awt.Font("Lobster", 0, 36)); // NOI18N
         jh2_1.setForeground(new java.awt.Color(248, 245, 240));
-        jh2_1.setText("Pechuga de");
+        jh2_1.setText("Combo ");
         jh2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanelPechuga.add(jh2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pechuga.jpg"))); // NOI18N
-        jPanelPechuga.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jPanelPechuga.add(jh2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, -1, -1));
+        jPanelPechuga.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelPechuga, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 210, 180));
 
@@ -292,8 +294,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelAlita.add(jLabelPollo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ala.jpg"))); // NOI18N
-        jPanelAlita.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel3.setText("jLabel2");
+        jPanelAlita.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelAlita, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 110, 210, 180));
 
@@ -319,8 +321,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelPierna.add(jLabelPollo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, 30));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pierna.jpg"))); // NOI18N
-        jPanelPierna.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel5.setText("jLabel2");
+        jPanelPierna.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelPierna, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 210, 180));
 
@@ -346,8 +348,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelPicantePollo.add(jLabelPollo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 90, 30));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pollo_picante.jpg"))); // NOI18N
-        jPanelPicantePollo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel6.setText("jLabel2");
+        jPanelPicantePollo.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelPicantePollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 210, 180));
 
@@ -373,8 +375,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelAlitas.add(jLabelPollo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alitas.jpg"))); // NOI18N
-        jPanelAlitas.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel7.setText("jLabel2");
+        jPanelAlitas.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelAlitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 210, 180));
 
@@ -400,8 +402,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelTenders.add(jLabelPollo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tenders.jpg"))); // NOI18N
-        jPanelTenders.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel8.setText("jLabel2");
+        jPanelTenders.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelTenders, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 210, 180));
 
@@ -420,8 +422,8 @@ public class CombosView extends javax.swing.JFrame {
         jh2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelEnsalada.add(jh2_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 50));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ensalada.jpg"))); // NOI18N
-        jPanelEnsalada.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel11.setText("jLabel2");
+        jPanelEnsalada.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelEnsalada, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 210, 180));
 
@@ -440,8 +442,8 @@ public class CombosView extends javax.swing.JFrame {
         jh2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelPapasFritas.add(jh2_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 50));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/papas_fritas.jpg"))); // NOI18N
-        jPanelPapasFritas.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel13.setText("jLabel2");
+        jPanelPapasFritas.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelPapasFritas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 510, 210, 180));
 
@@ -460,9 +462,8 @@ public class CombosView extends javax.swing.JFrame {
         jh2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelCocaLata.add(jh2_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, -1, 50));
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cocalata.jpg"))); // NOI18N
-        jLabel37.setToolTipText("");
-        jPanelCocaLata.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel14.setText("jLabel2");
+        jPanelCocaLata.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelCocaLata, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 510, 210, 180));
 
@@ -488,8 +489,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelCocaJumbo.add(jLabelPollo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
 
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cocajumbo.jpg"))); // NOI18N
-        jPanelCocaJumbo.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel15.setText("jLabel2");
+        jPanelCocaJumbo.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelCocaJumbo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 710, 210, 180));
 
@@ -515,8 +516,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelFrescoCrema.add(jLabelPollo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 80, 40));
 
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/frescocrema.jpg"))); // NOI18N
-        jPanelFrescoCrema.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel17.setText("jLabel2");
+        jPanelFrescoCrema.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelFrescoCrema, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 710, 210, 180));
 
@@ -535,8 +536,8 @@ public class CombosView extends javax.swing.JFrame {
         jh2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelPanPollo.add(jh2_12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/panconpollo.jpg"))); // NOI18N
-        jPanelPanPollo.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel18.setText("jLabel2");
+        jPanelPanPollo.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelPanPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 710, 210, 180));
 
@@ -567,8 +568,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelBurguerPollo.add(jLabelPollo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/burguer.jpg"))); // NOI18N
-        jPanelBurguerPollo.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel20.setText("jLabel2");
+        jPanelBurguerPollo.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelBurguerPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 910, 210, 180));
 
@@ -594,8 +595,8 @@ public class CombosView extends javax.swing.JFrame {
         jLabelPollo10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelTacosPollo.add(jLabelPollo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 120, 40));
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tacopollo.jpg"))); // NOI18N
-        jPanelTacosPollo.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel21.setText("jLabel2");
+        jPanelTacosPollo.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelTacosPollo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 910, 210, 180));
 
@@ -614,8 +615,8 @@ public class CombosView extends javax.swing.JFrame {
         jh2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanelSalchipapa.add(jh2_15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 50));
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/salchipapa.jpg"))); // NOI18N
-        jPanelSalchipapa.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
+        jLabel23.setText("jLabel2");
+        jPanelSalchipapa.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 210, 100));
 
         background.add(jPanelSalchipapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 910, 210, 180));
 
@@ -854,10 +855,10 @@ public class CombosView extends javax.swing.JFrame {
             }
         });
     }
-    
-     private void setImageButton(JButton labelName, String root){
+                                                    
+     private void setImageLabel(JLabel labelName, String root){
         ImageIcon image = new ImageIcon(root);
-        Icon icon = new ImageIcon(image.getImage().getScaledInstance(20,20,Image.SCALE_SMOOTH));
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(210,100,Image.SCALE_SMOOTH));
         labelName.setIcon(icon);
         this.repaint();
     }
@@ -870,21 +871,21 @@ public class CombosView extends javax.swing.JFrame {
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabelPollo1;
     private javax.swing.JLabel jLabelPollo10;
     private javax.swing.JLabel jLabelPollo2;
