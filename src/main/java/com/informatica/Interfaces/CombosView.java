@@ -10,6 +10,7 @@ import com.informatica.clases.Producto;
 import com.informatica.clases.Usuarios_1;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.Image;
 import javax.swing.*;
 /**
  *
@@ -852,6 +853,13 @@ public class CombosView extends javax.swing.JFrame {
                 new CombosView().setVisible(true);
             }
         });
+    }
+    
+     private void setImageButton(JButton labelName, String root){
+        ImageIcon image = new ImageIcon(root);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(20,20,Image.SCALE_SMOOTH));
+        labelName.setIcon(icon);
+        this.repaint();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

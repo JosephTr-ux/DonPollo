@@ -10,6 +10,7 @@ import com.informatica.clases.Producto;
 import com.informatica.clases.Usuarios_1;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.Image;
 import javax.swing.*;
 /**
  *
@@ -61,6 +62,8 @@ public class PromosView extends javax.swing.JFrame {
         jLabelPollo8.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
         jLabelPollo9.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
         jLabelPollo10.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,28));
+        
+        //Asignacio para tamaños de imagen
         
         
     }
@@ -854,6 +857,13 @@ public class PromosView extends javax.swing.JFrame {
                 new PromosView().setVisible(true);
             }
         });
+    }
+    
+     private void setImageButton(JLabel labelName, String root){
+        ImageIcon image = new ImageIcon(root);
+        Icon icon = new ImageIcon(image.getImage().getScaledInstance(20,20,Image.SCALE_SMOOTH));
+        labelName.setIcon(icon);
+        this.repaint();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

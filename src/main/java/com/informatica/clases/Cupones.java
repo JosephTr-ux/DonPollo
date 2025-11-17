@@ -12,6 +12,7 @@ public class Cupones {
     private String Codigo;
     private float Descuento;
     private boolean cuponUsado;
+    private boolean activo;
 
     public Cupones() {
     }
@@ -27,6 +28,15 @@ public class Cupones {
         this.cuponUsado = false;
     }
 
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
+
+    
 
     public String getCodigo() {
         return Codigo;
