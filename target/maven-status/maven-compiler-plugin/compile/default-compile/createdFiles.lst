@@ -6,6 +6,7 @@ com\informatica\Interfaces\CombosView.class
 com\informatica\Interfaces\PromosView$6.class
 com\informatica\Interfaces\LoginView$5.class
 com\informatica\Interfaces\PostresView$3.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$2.class
 com\informatica\Interfaces\PromosView$19.class
 com\informatica\Interfaces\IndividualesView1$17.class
 com\informatica\Interfaces\CombosView$25.class
@@ -19,12 +20,10 @@ com\informatica\Interfaces\PostresView$22.class
 com\informatica\Interfaces\CarritoCompras.class
 com\informatica\Interfaces\IndividualesView1$11.class
 com\informatica\Interfaces\MenuOpciones$7.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra$2.class
 com\informatica\Interfaces\MenuOpciones.class
 com\informatica\Interfaces\PromosView$21.class
 com\informatica\DatosModel\CuponesDatos.class
 com\informatica\Interfaces\RegistroView$12.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra$1.class
 com\informatica\Interfaces\PostresView$21.class
 com\informatica\Interfaces\MenuOpciones$6.class
 com\informatica\Interfaces\PostresView$15.class
@@ -33,6 +32,7 @@ com\informatica\Interfaces\PostresView$4.class
 com\informatica\Interfaces\CarritoCompras$3.class
 com\informatica\Interfaces\PromosView$5.class
 com\informatica\Interfaces\IndividualesView1$16.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra.class
 com\informatica\Interfaces\CombosView$24.class
 com\informatica\Interfaces\IndividualesView1$13.class
 com\informatica\Interfaces\CarritoCompras$8.class
@@ -44,9 +44,9 @@ com\informatica\Interfaces\RegistroView.class
 com\informatica\Interfaces\PromosView.class
 com\informatica\Interfaces\CombosView$8.class
 com\informatica\Interfaces\IndividualesView1$1.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$1.class
 com\informatica\Interfaces\RegistroView$7.class
 com\informatica\Interfaces\IndividualesView1$20.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra$3.class
 com\informatica\Interfaces\PostresView$5.class
 com\informatica\Interfaces\PostresView$25.class
 com\informatica\Interfaces\CombosView$21.class
@@ -59,7 +59,7 @@ com\informatica\Interfaces\PostresView$19.class
 com\informatica\Interfaces\RegistroView$8.class
 com\informatica\Interfaces\CombosView$19.class
 com\informatica\Interfaces\CombosView$22.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra$5.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$4.class
 com\informatica\Interfaces\PostresView$8.class
 com\informatica\Interfaces\PromosView$1.class
 com\informatica\Interfaces\PromosView$24.class
@@ -72,13 +72,13 @@ com\informatica\Interfaces\PromosView$25.class
 com\informatica\Interfaces\PromosView$2.class
 com\informatica\Interfaces\PostresView$18.class
 com\informatica\Interfaces\RegistroView$10.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra$4.class
 com\informatica\Interfaces\CombosView$9.class
 com\informatica\Interfaces\CombosView$18.class
 com\informatica\Interfaces\PostresView.class
 com\informatica\Interfaces\RegistroView$9.class
 com\informatica\Interfaces\CarritoCompras$6.class
 com\informatica\Interfaces\CuponesView$7.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$3.class
 com\informatica\clases\Usuarios_1.class
 com\informatica\Interfaces\CarritoCompras$1.class
 com\informatica\Interfaces\PromosView$16.class
@@ -88,6 +88,7 @@ com\informatica\Interfaces\CuponesView$3.class
 com\informatica\Interfaces\IndividualesView1.class
 com\informatica\Interfaces\PostresView$24.class
 com\informatica\Interfaces\RegistroView$6.class
+com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$5.class
 com\informatica\Interfaces\PostresView$6.class
 com\informatica\Interfaces\MenuOpciones$9.class
 com\informatica\Interfaces\IndividualesView1$22.class
@@ -120,7 +121,6 @@ com\informatica\Interfaces\IndividualesView1$10.class
 com\informatica\Interfaces\IndividualesView1$3.class
 com\informatica\Interfaces\LoginView$8.class
 com\informatica\Interfaces\PromosView$17.class
-com\informatica\VentanasEmergentes\PanelDescripcionDeCompra.class
 com\informatica\Interfaces\CuponesView$4.class
 com\informatica\Interfaces\PromosView$22.class
 com\informatica\Interfaces\MenuOpciones$10.class

@@ -4,6 +4,9 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.clases.Usuarios_1;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Temporal
@@ -293,10 +296,23 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginMouseClicked
 
     private void btnOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdenarActionPerformed
-        MenuOpciones menuOpciones = new MenuOpciones();
-        menuOpciones.setVisible(true);
-        menuOpciones.setLocationRelativeTo(null);
+        Usuarios_1 user = new Usuarios_1();
+        if(user.isEstaLogeado() == true ){
+            MenuOpciones menuO = new MenuOpciones();
+            menuO.setVisible(true);
+            menuO.setLocationRelativeTo(null);
+            setVisible(false);
+         }else{
+            JOptionPane.showMessageDialog(this, 
+            "Debes iniciar sesión para realizar un pedido", 
+            "Iniciar Sesión Requerido", 
+            JOptionPane.WARNING_MESSAGE);
+            LoginView login = new LoginView();
+            login.setVisible(true);
+            login.setLocationRelativeTo(null);
         setVisible(false);
+        }
+        
     }//GEN-LAST:event_btnOrdenarActionPerformed
 
     /**

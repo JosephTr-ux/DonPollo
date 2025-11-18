@@ -35,17 +35,27 @@ public class DatosDelUsuario {
         }
     }
         
-        public boolean iniciarSesion(Usuarios_1 usuario){
-        String sql = "SELECT users.id FROM users WHERE users.email = ? AND users.contrasenia = ?";
-        try {
-                Connection connection = Conexion.conectar();
-                PreparedStatement ps = connection.prepareStatement(sql);
+        public Usuarios_1 iniciarSesion(Usuarios_1 usuario){
+        String sql = "SELECT users.id, users.nombre, users.no_telefono FROM users WHERE users.email = ? AND users.contrasenia = ?";
+        try(   Connection connection = Conexion.conectar();
+                   PreparedStatement ps = connection.prepareStatement(sql);
+                ) {
                 ps.setString(1, usuario.getEmail());
                 ps.setString(2, usuario.getPass());
-                ResultSet resultSet = ps.executeQuery();
-                return true;
+                try(ResultSet resultSet = ps.executeQuery()){
+                    if(resultSet.next()){
+                        Usuarios_1 users = new Usuarios_1();
+                        users.setId(resultSet.getInt("id"));
+                        users.setNombre(resultSet.getString("nombre"));
+                        users.setNumeroTelefono(resultSet.getInt("no_telefono"));
+                        users.login(usuario);
+                        return users;
+                    }
+                }
+                
         } catch (SQLException e) {
-            return false;
+            return null;
         }
+        return null;
     }
 }

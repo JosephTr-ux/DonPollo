@@ -1,12 +1,7 @@
 package com.informatica.pollofrito;
 
-import com.informatica.Interfaces.CombosView;
-import com.informatica.Interfaces.IndividualesView1;
-import com.informatica.Interfaces.MenuOpciones;
-import java.util.ArrayList;
+import com.informatica.Interfaces.MenuMain;
 import java.util.Scanner;
-import com.informatica.clases.*;
-
 public class PolloFrito {
     //Clase para contener todos los usuarios y productos
     /*
@@ -29,7 +24,7 @@ public class PolloFrito {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        CombosView login = new CombosView();
+        MenuMain login = new MenuMain();
         login.setVisible(true);
         login.setLocationRelativeTo(null);
 

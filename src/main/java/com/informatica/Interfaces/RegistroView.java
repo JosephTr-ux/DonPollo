@@ -7,6 +7,7 @@ package com.informatica.Interfaces;
 import com.informatica.DatosModel.DatosDelUsuario;
 import java.awt.Color;
 import com.informatica.clases.Usuarios_1;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Temporal
@@ -338,6 +339,13 @@ public class RegistroView extends javax.swing.JFrame {
         Usuarios_1 user = new Usuarios_1(nombre,email,telefono,contra);
         DatosDelUsuario userAdmin = new DatosDelUsuario();
         if(userAdmin.agregarUsuario(user)){
+            JOptionPane.showMessageDialog(this, 
+        "¡Registro exitoso!\n" +
+        "Has recibido un cupón de bienvenida del 5%\n" +
+        "Código: BIENVENIDA" + user.getId(),
+        "Registro Exitoso", 
+        JOptionPane.INFORMATION_MESSAGE);
+            
             MenuMain menu = new MenuMain();
             menu.setVisible(true);
             menu.setLocationRelativeTo(null);

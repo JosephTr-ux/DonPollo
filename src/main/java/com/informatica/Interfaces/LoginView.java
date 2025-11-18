@@ -219,12 +219,14 @@ public class LoginView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirMouseExited
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-       String correo = txtEmail.getText();
+       String correo = txtEmail.getText().trim();
        String contra = new String(txtPassword.getPassword());
+       contra.trim();
        
        Usuarios_1 user  = new Usuarios_1(correo,contra);
        DatosDelUsuario userAdmin = new  DatosDelUsuario();
-       if(userAdmin.iniciarSesion(user)){
+       Usuarios_1 userFinal = userAdmin.iniciarSesion(user);
+       if(userFinal != null){
           MenuMain menu = new MenuMain();
           menu.setVisible(true);
           menu.setLocationRelativeTo(null);

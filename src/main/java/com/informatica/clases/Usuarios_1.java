@@ -2,15 +2,16 @@ package com.informatica.clases;
 
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Usuarios_1 {
+    private int id;
     private String nombre;
     private String email;
     private int numeroTelefono;
     private String pass;
     private DireccionDeEnvio deEnvio;
     private ArrayList<Cupones> cupons;
+    private static  boolean estaLogeado;
 
     public Usuarios_1() {
     }
@@ -37,6 +38,23 @@ public class Usuarios_1 {
         this.cupons = cupons;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public boolean isEstaLogeado() {
+        return estaLogeado;
+    }
+
+    public void setEstaLogeado(boolean estaLogeado) {
+        this.estaLogeado = estaLogeado;
+    }
+
+    
     public ArrayList<Cupones> getCupons() {
         return cupons;
     }
@@ -97,12 +115,13 @@ public class Usuarios_1 {
             }
             }else System.out.println("Actualmente no tienes cupones");
     }
-
-    public void mostrarDatosUsuario(){
-        System.out.println("Nombre de Usuario: " + nombre);
-        System.out.println("Email: " + email);
-        System.out.println("Telefono: "+ numeroTelefono);
-        System.out.println("Contrasenia: *******");
+    
+    public  void login(Usuarios_1 user){
+        user.setEstaLogeado(true);
+    }
+    public  void logout(Usuarios_1 user){
+        user.setEstaLogeado(false);
+        user = null;
     }
 
 }
