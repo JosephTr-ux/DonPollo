@@ -679,54 +679,7 @@ public class IndividualesView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_lblTituloMouseClicked
 
     private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
-        Usuarios_1 usuario = new Usuarios_1();
         
-        JFrame frameUsuario = new JFrame("Datos del Usuario");
-        frameUsuario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frameUsuario.setSize(400, 400);
-        frameUsuario.setLocationRelativeTo(null);
-        
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-        
-        JLabel lblTitulo1 = new JLabel("Información del Usuario");
-        lblTitulo1.setFont(new Font("Segoe UI", Font.BOLD, 20));
-        lblTitulo1.setAlignmentX(Component.CENTER_ALIGNMENT);
-        panel.add(lblTitulo1);
-        panel.add(Box.createVerticalStrut(20));
-        
-        JLabel lblNombre = new JLabel("Nombre: " + usuario.getNombre());
-        JLabel lblCorreo = new JLabel("Correo: " + usuario.getEmail());
-        JLabel lblTelefono = new JLabel("Teléfono: " + usuario.getNumeroTelefono());
-        JLabel lblDireccion = new JLabel("Dirección: " + usuario.getDeEnvio());
-
-         lblNombre.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblCorreo.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblTelefono.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblDireccion.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-
-        panel.add(lblNombre);
-        panel.add(lblCorreo);
-        panel.add(lblTelefono);
-        panel.add(lblDireccion);
-        panel.add(Box.createVerticalGlue());
-
-        JButton btnRegresar = new JButton("← Regresar");
-        btnRegresar.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btnRegresar.addActionListener(e -> {
-        frameUsuario.dispose(); 
-        this.setVisible(true);  
-    });
-
-        panel.add(Box.createVerticalStrut(20));
-        panel.add(btnRegresar);
-
-        frameUsuario.add(panel);
-        frameUsuario.setVisible(true);
-
-    
-        this.setVisible(false);
         
     }//GEN-LAST:event_btnCarritoMouseClicked
 

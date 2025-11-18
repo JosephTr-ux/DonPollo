@@ -13,22 +13,30 @@ public class DireccionDeEnvio {
 
     private String Calle;
     private String Ciudad;
-    private int CodigoPostal;
-    private String colonia;
-    private Usuarios_1 userActual;
+    private String Departamento;
+    private Usuarios_1 userActual = new Usuarios_1();
 
     public DireccionDeEnvio() {
     }
+
+    public DireccionDeEnvio(String Calle, String Ciudad, String Departamento) {
+        this.Calle = Calle;
+        this.Ciudad = Ciudad;
+        this.Departamento = Departamento;
+    }
+    
+    
 
     public DireccionDeEnvio(Usuarios_1 userActual) {
         this.userActual = userActual;
     }
 
-    public DireccionDeEnvio(String calle, String ciudad, int codigoPostal, String colonia) {
-        Calle = calle;
-        Ciudad = ciudad;
-        CodigoPostal = codigoPostal;
-        this.colonia = colonia;
+    public String getDepartamento() {
+        return Departamento;
+    }
+
+    public void setDepartamento(String Departamento) {
+        this.Departamento = Departamento;
     }
 
     public String getCalle() {
@@ -47,18 +55,6 @@ public class DireccionDeEnvio {
         Ciudad = ciudad;
     }
 
-    public int getCodigoPostal() {
-        return CodigoPostal;
-    }
-
-    public void setCodigoPostal(int codigoPostal) {
-        CodigoPostal = codigoPostal;
-    }
-
-    public String getColonia() {
-        return colonia;
-    }
-
     public Usuarios_1 getUserActual() {
         return userActual;
     }
@@ -67,33 +63,9 @@ public class DireccionDeEnvio {
         this.userActual = userActual;
     }
 
-    public void setColonia(String colonia) {
-        this.colonia = colonia;
-    }
+   
 
-    public void agregarDireccion(){
-        Scanner scanner = new Scanner(System.in);
-        String calle,ciudad,colonia;
-        int codePostal;
-
-        System.out.println("Agrega la calle: ");
-        calle = scanner.nextLine();
-
-        System.out.println("Agrega la ciudad: ");
-        ciudad = scanner.nextLine();
-
-        System.out.println("Agrega el codigo postal: ");
-        codePostal = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Agrega la colonia: ");
-        colonia = scanner.nextLine();
-
-        setCalle(calle);
-        setCiudad(ciudad);
-        setCodigoPostal(codePostal);
-        setColonia(colonia);
-    }
+ 
 
     
 }

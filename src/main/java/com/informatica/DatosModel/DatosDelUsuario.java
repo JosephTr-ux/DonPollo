@@ -36,6 +36,7 @@ public class DatosDelUsuario {
                 try(ResultSet rs = ps.getGeneratedKeys()){
                     if(rs.next()){
                         usuario.setId(rs.getInt(1));
+                        SesionUsuario.setIdUsuarioActual(rs.getInt(1));
                         return usuario;
                     }
                 }
@@ -63,6 +64,7 @@ public class DatosDelUsuario {
                         users.setNombre(resultSet.getString("nombre"));
                         users.setNumeroTelefono(resultSet.getInt("no_telefono"));
                         users.login(usuario);
+                        SesionUsuario.setIdUsuarioActual(users.getId());
                         return users;
                     }
                 }
