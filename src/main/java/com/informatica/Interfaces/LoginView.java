@@ -226,6 +226,8 @@ public class LoginView extends javax.swing.JFrame {
        Usuarios_1 user  = new Usuarios_1(correo,contra);
        DatosDelUsuario userAdmin = new  DatosDelUsuario();
        Usuarios_1 userFinal = userAdmin.iniciarSesion(user);
+       userFinal.setEmail(correo);
+       userFinal.setPass(contra);
        if(userFinal != null){
           MenuMain menu = new MenuMain();
           menu.setVisible(true);

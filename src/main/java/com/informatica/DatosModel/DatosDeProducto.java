@@ -5,7 +5,10 @@
 package com.informatica.DatosModel;
 
 import com.informatica.clases.Producto;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class DatosDeProducto {
     
@@ -23,7 +26,7 @@ public class DatosDeProducto {
                         resultado.getString("descripcion")
                 );
             }
-        }catch(SQLException e){
+            }catch(SQLException e){
             e.printStackTrace();
         }
         return null;
