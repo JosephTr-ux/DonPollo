@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -18,20 +19,33 @@ public class DatosDelUsuario {
     public DatosDelUsuario(){
     }
     
-    public boolean agregarUsuario(Usuarios_1 usuario){
+    public Usuarios_1 agregarUsuario(Usuarios_1 usuario){
+        int filasAfectadas = -1;
         String sql = "INSERT INTO users (nombre, email, no_telefono, contrasenia) VALUES(?,?,?,?)";
         try{
             Connection conexion = Conexion.conectar();
-            PreparedStatement ps = conexion.prepareStatement(sql);
+            PreparedStatement ps = conexion.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, usuario.getNombre());
             ps.setString(2, usuario.getEmail());
             ps.setInt(3, usuario.getNumeroTelefono());
             ps.setString(4, usuario.getPass());
-            ps.executeUpdate();
-            return true;
+            
+            filasAfectadas = ps.executeUpdate();
+            
+            if(filasAfectadas > 0){
+                try(ResultSet rs = ps.getGeneratedKeys()){
+                    if(rs.next()){
+                        usuario.setId(rs.getInt(1));
+                        return usuario;
+                    }
+                }
+            }
+            
+            
+            return  null;
         }catch(SQLException e){
             System.out.println("Error al insertar datos: "+e.getMessage());
-            return false;
+            return null;
         }
     }
         

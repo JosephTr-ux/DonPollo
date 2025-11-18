@@ -3,6 +3,7 @@ package com.informatica.pollofrito;
 import com.informatica.Interfaces.CombosView;
 import com.informatica.Interfaces.IndividualesView1;
 import com.informatica.Interfaces.MenuMain;
+import com.informatica.Interfaces.RegistroView;
 import java.util.Scanner;
 public class PolloFrito {
     //Clase para contener todos los usuarios y productos
@@ -26,7 +27,7 @@ public class PolloFrito {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        IndividualesView1 login = new IndividualesView1();
+        RegistroView login = new RegistroView();
         login.setVisible(true);
         login.setLocationRelativeTo(null);
 

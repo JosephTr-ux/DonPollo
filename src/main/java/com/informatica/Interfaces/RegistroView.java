@@ -4,6 +4,7 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.DatosDelUsuario;
 import java.awt.Color;
 import com.informatica.clases.Usuarios_1;
@@ -336,15 +337,19 @@ public class RegistroView extends javax.swing.JFrame {
         int telefono = Integer.parseInt(txtTelefono.getText());
         String contra = new String(txtPassword.getPassword());
         
+        CuponesDatos cupon = new CuponesDatos();
         Usuarios_1 user = new Usuarios_1(nombre,email,telefono,contra);
         DatosDelUsuario userAdmin = new DatosDelUsuario();
-        if(userAdmin.agregarUsuario(user)){
+        Usuarios_1 userFinal = userAdmin.agregarUsuario(user);
+        if(user != null){
+            user.setEstaLogeado(true);
             JOptionPane.showMessageDialog(this, 
         "¡Registro exitoso!\n" +
         "Has recibido un cupón de bienvenida del 5%\n" +
-        "Código: BIENVENIDA" + user.getId(),
+        "Código: DONPOLLOBIENVENIDA" + user.getId(),
         "Registro Exitoso", 
         JOptionPane.INFORMATION_MESSAGE);
+            cupon.asignarCupon(true, 1);
             
             MenuMain menu = new MenuMain();
             menu.setVisible(true);
