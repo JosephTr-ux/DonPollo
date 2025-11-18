@@ -1,5 +1,7 @@
 package com.informatica.pollofrito;
 
+import com.informatica.Interfaces.CombosView;
+import com.informatica.Interfaces.IndividualesView1;
 import com.informatica.Interfaces.MenuMain;
 import java.util.Scanner;
 public class PolloFrito {
@@ -24,7 +26,7 @@ public class PolloFrito {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        MenuMain login = new MenuMain();
+        IndividualesView1 login = new IndividualesView1();
         login.setVisible(true);
         login.setLocationRelativeTo(null);
 
