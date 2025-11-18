@@ -334,14 +334,14 @@ public class MenuOpciones extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioActionPerformed
 
     private void combo_bckgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_combo_bckgMouseClicked
-        CombosView comboView = new CombosView();
+        CombosView1 comboView = new CombosView1();
         comboView.setVisible(true);
         comboView.setLocationRelativeTo(null);
         setVisible(false);
     }//GEN-LAST:event_combo_bckgMouseClicked
 
     private void promo_bckgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_promo_bckgMouseClicked
-        PromosView promo = new PromosView();
+        PromosView1 promo = new PromosView1();
         promo.setVisible(true);
         promo.setLocationRelativeTo(null);
         setVisible(false);
@@ -355,7 +355,7 @@ public class MenuOpciones extends javax.swing.JFrame {
     }//GEN-LAST:event_indi_bckgMouseClicked
 
     private void postres_bckgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_postres_bckgMouseClicked
-        PostresView postreMenu = new PostresView();
+        PostresView1 postreMenu = new PostresView1();
         postreMenu.setVisible(true);
         postreMenu.setLocationRelativeTo(null);
         setVisible(false);
