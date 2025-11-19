@@ -14,8 +14,32 @@ public class CuponesView extends javax.swing.JFrame {
      * Creates new form CuponesView
      */
     private int xMouse,yMouse;
+    private CargarTipografias tipoFuente;
     public CuponesView() {
+        setUndecorated(true);
         initComponents();
+        tipoFuente = new CargarTipografias();
+        
+        jLabelDesc1.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 48));
+        jLabelDesc2.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 48));
+        jLabelDesc3.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 48));
+        jLabelDesc4.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 48));
+        btnInicio.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 48));
+        
+        jLabelNumDesc1.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 1,100));
+        jLabelNumDesc2.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 1,100));
+        jLabelNumDesc3.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 1,100));
+        jLabelNumDesc4.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 1,100));
+        
+        jLabelh21.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 24));
+        jLabelh22.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 24));
+        jLabelh23.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 24));
+        jLabelh24.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 24));
+        jLabelh25.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 32));
+        jLabelh26.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 32));
+        jLabelh27.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0, 32));
+        
+        
     }
 
     /**
@@ -32,9 +56,32 @@ public class CuponesView extends javax.swing.JFrame {
         btnSalir = new javax.swing.JLabel();
         btnMaximizar = new javax.swing.JLabel();
         jPanelHeader = new javax.swing.JPanel();
-        btnMenu = new javax.swing.JButton();
+        btnInicio = new javax.swing.JButton();
         jlabelLogo = new javax.swing.JLabel();
+        background = new javax.swing.JPanel();
+        panelcupon1 = new javax.swing.JPanel();
+        jLabelh21 = new javax.swing.JLabel();
+        jLabelNumDesc1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabelDesc1 = new javax.swing.JLabel();
+        panelcupon2 = new javax.swing.JPanel();
+        jLabelh22 = new javax.swing.JLabel();
+        jLabelNumDesc2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabelDesc2 = new javax.swing.JLabel();
+        panelcupon3 = new javax.swing.JPanel();
+        jLabelh23 = new javax.swing.JLabel();
+        jLabelNumDesc3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabelDesc3 = new javax.swing.JLabel();
+        jLabelh24 = new javax.swing.JLabel();
+        panelcupon4 = new javax.swing.JPanel();
+        jLabelh25 = new javax.swing.JLabel();
+        jLabelNumDesc4 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabelDesc4 = new javax.swing.JLabel();
+        jLabelh26 = new javax.swing.JLabel();
+        jLabelh27 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -92,39 +139,144 @@ public class CuponesView extends javax.swing.JFrame {
         jPanelHeader.setPreferredSize(new java.awt.Dimension(900, 180));
         jPanelHeader.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnMenu.setBackground(new java.awt.Color(255, 211, 61));
-        btnMenu.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
-        btnMenu.setForeground(new java.awt.Color(26, 26, 26));
-        btnMenu.setText("Inicio");
-        btnMenu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(193, 39, 45), 2, true));
-        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+        btnInicio.setBackground(new java.awt.Color(255, 211, 61));
+        btnInicio.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(26, 26, 26));
+        btnInicio.setText("Inicio");
+        btnInicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(193, 39, 45), 2, true));
+        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnInicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
+                btnInicioActionPerformed(evt);
             }
         });
-        jPanelHeader.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 30, 120, -1));
+        jPanelHeader.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 30, 120, -1));
 
         jlabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/donpollo-minilogo.png"))); // NOI18N
         jPanelHeader.add(jlabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 5, -1, -1));
 
         getContentPane().add(jPanelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 35, 910, 120));
 
-        jPanel1.setBackground(new java.awt.Color(248, 245, 240));
+        background.setBackground(new java.awt.Color(248, 245, 240));
+        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 910, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
+        panelcupon1.setBackground(new java.awt.Color(73, 49, 44));
+        panelcupon1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 910, 570));
+        jLabelh21.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
+        jLabelh21.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh21.setText("Por registrarte!!");
+        panelcupon1.add(jLabelh21, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 10, 150, -1));
+
+        jLabelNumDesc1.setFont(new java.awt.Font("Bebas Neue", 1, 100)); // NOI18N
+        jLabelNumDesc1.setForeground(new java.awt.Color(255, 211, 61));
+        jLabelNumDesc1.setText("5%");
+        panelcupon1.add(jLabelNumDesc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 100));
+
+        jPanel1.setBackground(new java.awt.Color(193, 39, 45));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelDesc1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelDesc1.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelDesc1.setText("Descuento");
+        jPanel1.add(jLabelDesc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, -1, 44));
+
+        panelcupon1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 170, 50));
+
+        background.add(panelcupon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 210, 260));
+
+        panelcupon2.setBackground(new java.awt.Color(73, 49, 44));
+        panelcupon2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelh22.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
+        jLabelh22.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh22.setText("Por Navidad!!");
+        panelcupon2.add(jLabelh22, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 10, 150, -1));
+
+        jLabelNumDesc2.setFont(new java.awt.Font("Bebas Neue", 1, 100)); // NOI18N
+        jLabelNumDesc2.setForeground(new java.awt.Color(255, 211, 61));
+        jLabelNumDesc2.setText("20%");
+        panelcupon2.add(jLabelNumDesc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 50, -1, 100));
+
+        jPanel2.setBackground(new java.awt.Color(193, 39, 45));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelDesc2.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelDesc2.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelDesc2.setText("Descuento");
+        jPanel2.add(jLabelDesc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, -1, 44));
+
+        panelcupon2.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 170, 50));
+
+        background.add(panelcupon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 210, 260));
+
+        panelcupon3.setBackground(new java.awt.Color(73, 49, 44));
+        panelcupon3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelh23.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
+        jLabelh23.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh23.setText("supere Q.300.00");
+        panelcupon3.add(jLabelh23, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 40, 160, -1));
+
+        jLabelNumDesc3.setFont(new java.awt.Font("Bebas Neue", 1, 100)); // NOI18N
+        jLabelNumDesc3.setForeground(new java.awt.Color(255, 211, 61));
+        jLabelNumDesc3.setText("15%");
+        panelcupon3.add(jLabelNumDesc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, 100));
+
+        jPanel3.setBackground(new java.awt.Color(193, 39, 45));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelDesc3.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelDesc3.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelDesc3.setText("Descuento");
+        jPanel3.add(jLabelDesc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, -1, 44));
+
+        panelcupon3.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 170, 50));
+
+        jLabelh24.setFont(new java.awt.Font("Lobster", 0, 24)); // NOI18N
+        jLabelh24.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh24.setText("Cuando tu compra");
+        panelcupon3.add(jLabelh24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 180, -1));
+
+        background.add(panelcupon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 50, 210, 260));
+
+        panelcupon4.setBackground(new java.awt.Color(73, 49, 44));
+        panelcupon4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelh25.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelh25.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh25.setText("Completados");
+        panelcupon4.add(jLabelh25, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 170, -1));
+
+        jLabelNumDesc4.setFont(new java.awt.Font("Bebas Neue", 1, 100)); // NOI18N
+        jLabelNumDesc4.setForeground(new java.awt.Color(255, 211, 61));
+        jLabelNumDesc4.setText("10%");
+        panelcupon4.add(jLabelNumDesc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, 100));
+
+        jPanel4.setBackground(new java.awt.Color(193, 39, 45));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelDesc4.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelDesc4.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelDesc4.setText("Descuento");
+        jPanel4.add(jLabelDesc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 3, -1, 44));
+
+        panelcupon4.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 170, 50));
+
+        jLabelh26.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelh26.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh26.setText("Después de ");
+        panelcupon4.add(jLabelh26, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 150, -1));
+
+        jLabelh27.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelh27.setForeground(new java.awt.Color(248, 245, 240));
+        jLabelh27.setText("3 pedidos ");
+        panelcupon4.add(jLabelh27, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+
+        background.add(panelcupon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 470, 180));
+
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 910, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -160,12 +312,12 @@ public class CuponesView extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
         MenuMain main = new MenuMain();
         main.setVisible(true);
         main.setLocationRelativeTo(null);
         setVisible(false);
-    }//GEN-LAST:event_btnMenuActionPerformed
+    }//GEN-LAST:event_btnInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -203,13 +355,36 @@ public class CuponesView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
+    private javax.swing.JButton btnInicio;
     private javax.swing.JLabel btnMaximizar;
-    private javax.swing.JButton btnMenu;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
+    private javax.swing.JLabel jLabelDesc1;
+    private javax.swing.JLabel jLabelDesc2;
+    private javax.swing.JLabel jLabelDesc3;
+    private javax.swing.JLabel jLabelDesc4;
+    private javax.swing.JLabel jLabelNumDesc1;
+    private javax.swing.JLabel jLabelNumDesc2;
+    private javax.swing.JLabel jLabelNumDesc3;
+    private javax.swing.JLabel jLabelNumDesc4;
+    private javax.swing.JLabel jLabelh21;
+    private javax.swing.JLabel jLabelh22;
+    private javax.swing.JLabel jLabelh23;
+    private javax.swing.JLabel jLabelh24;
+    private javax.swing.JLabel jLabelh25;
+    private javax.swing.JLabel jLabelh26;
+    private javax.swing.JLabel jLabelh27;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelSalida;
     private javax.swing.JLabel jlabelLogo;
+    private javax.swing.JPanel panelcupon1;
+    private javax.swing.JPanel panelcupon2;
+    private javax.swing.JPanel panelcupon3;
+    private javax.swing.JPanel panelcupon4;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,7 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.Interfaces.CargarTipografias;
 import com.informatica.Interfaces.MenuMain;
 
 /**
@@ -16,9 +17,23 @@ public class DireccionView extends javax.swing.JFrame {
      * Creates new form DireccionView
      */
     private int yMouse,xMouse;
+    private CargarTipografias tipoFuente;
     public DireccionView() {
         setUndecorated(false);
         initComponents();
+        
+        tipoFuente = new CargarTipografias();
+        
+        jLabelCalle.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,32));
+        jLabelCiudad.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,32));
+        jLabelDepa.setFont(tipoFuente.fuente(tipoFuente.Lobster, 0,32));
+        
+        jLabelagrega.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
+        jLabelantesde.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
+        btnFinPedido.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,36));
+        
+        
+        
     }
 
     /**
@@ -37,15 +52,15 @@ public class DireccionView extends javax.swing.JFrame {
         jPanelHeader = new javax.swing.JPanel();
         jlabelLogo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelagrega = new javax.swing.JLabel();
+        jLabelantesde = new javax.swing.JLabel();
+        jLabelCalle = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jLabelCiudad = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelDepa = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnFinPedido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -111,20 +126,20 @@ public class DireccionView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(248, 245, 240));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel1.setText("Agrega una dirreccion para tu pedido");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
+        jLabelagrega.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelagrega.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelagrega.setText("Agrega una dirreccion para tu pedido");
+        jPanel1.add(jLabelagrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel2.setText("Antes de finalizar");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
+        jLabelantesde.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelantesde.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelantesde.setText("Antes de finalizar");
+        jPanel1.add(jLabelantesde, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel3.setText("Calle:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
+        jLabelCalle.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelCalle.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelCalle.setText("Calle:");
+        jPanel1.add(jLabelCalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(248, 245, 240));
         jTextField1.setFont(new java.awt.Font("Verdana", 1, 15)); // NOI18N
@@ -132,10 +147,10 @@ public class DireccionView extends javax.swing.JFrame {
         jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 300, 30));
 
-        jLabel4.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel4.setText("Ciudad:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
+        jLabelCiudad.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelCiudad.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelCiudad.setText("Ciudad:");
+        jPanel1.add(jLabelCiudad, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, -1, -1));
 
         jTextField2.setBackground(new java.awt.Color(248, 245, 240));
         jTextField2.setFont(new java.awt.Font("Verdana", 1, 15)); // NOI18N
@@ -143,10 +158,10 @@ public class DireccionView extends javax.swing.JFrame {
         jTextField2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 300, 30));
 
-        jLabel5.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(26, 26, 26));
-        jLabel5.setText("Departamento:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        jLabelDepa.setFont(new java.awt.Font("Lobster", 0, 32)); // NOI18N
+        jLabelDepa.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelDepa.setText("Departamento:");
+        jPanel1.add(jLabelDepa, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
 
         jTextField3.setBackground(new java.awt.Color(248, 245, 240));
         jTextField3.setFont(new java.awt.Font("Verdana", 1, 15)); // NOI18N
@@ -154,11 +169,11 @@ public class DireccionView extends javax.swing.JFrame {
         jTextField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 300, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 211, 61));
-        jButton1.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(26, 26, 26));
-        jButton1.setText("Finalizar Pedido");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
+        btnFinPedido.setBackground(new java.awt.Color(255, 211, 61));
+        btnFinPedido.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
+        btnFinPedido.setForeground(new java.awt.Color(26, 26, 26));
+        btnFinPedido.setText("Finalizar Pedido");
+        jPanel1.add(btnFinPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 680, 490));
 
@@ -232,15 +247,15 @@ public class DireccionView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFinPedido;
     private javax.swing.JLabel btnMaximizar;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelCalle;
+    private javax.swing.JLabel jLabelCiudad;
+    private javax.swing.JLabel jLabelDepa;
+    private javax.swing.JLabel jLabelagrega;
+    private javax.swing.JLabel jLabelantesde;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelSalida;
