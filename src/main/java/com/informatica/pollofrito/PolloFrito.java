@@ -29,7 +29,7 @@ public class PolloFrito {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        MenuOpciones login = new MenuOpciones();
+        MenuMain login = new MenuMain();
         login.setVisible(true);
         login.setLocationRelativeTo(null);
 

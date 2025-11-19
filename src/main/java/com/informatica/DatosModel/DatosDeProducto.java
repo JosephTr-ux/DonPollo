@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DatosDeProducto {
     
@@ -52,7 +53,37 @@ public class DatosDeProducto {
         }
         return null;
     }
-    
-    
+        
+         private boolean esCombo(int id) {
+            String sql = "SELECT id_combo FROM combo_promos WHERE id_combo = ?";
+            try (Connection cn = Conexion.conectar();
+                PreparedStatement ps = cn.prepareStatement(sql)) {
+            
+                ps.setInt(1, id);
+                ResultSet rs = ps.executeQuery();
+            
+                return rs.next();  // Si existe → es combo
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+            return false;
+    }
+        
+        
+        public  Producto encontrarItem(int id) {
+
+        // Si existe en combos → devolver combo
+        if (esCombo(id)) {
+            return encontrarComboPromo(id);
+        }
+
+        // Si no es combo → es producto normal
+        return encontrarProducto(id);
+    }
+
 }
+    
+    
+
 

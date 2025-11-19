@@ -4,9 +4,13 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.DatosDeProducto;
+import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CargarTipografias;
 import com.informatica.clases.Producto;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
 /**
  *
@@ -20,6 +24,10 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     private int xMouse,yMouse;
     private CargarTipografias tipoFuente = new CargarTipografias();
     private int id_producto;
+    private String tipoItem;
+    private DatosDeProducto productoSQL;
+    private Producto producto_normal;
+    private DatosCarrito datosCarrito;
     public PanelDescripcionDeCompra() {
         setUndecorated(true);
         initComponents();
@@ -38,9 +46,10 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         Crea una clase de DatosDeProducto para que posteriormente mande la consulta SQL
         y luego crear una clase tipo Producto y acceder a los valores
         */
-        DatosDeProducto productoSQL = new DatosDeProducto();
-        Producto producto_normal = productoSQL.encontrarProducto(opcionCliente);
+        productoSQL = new DatosDeProducto();
+        producto_normal = productoSQL.encontrarProducto(opcionCliente);
         this.setId_producto(opcionCliente);
+        this.setTipoItem("producto");
         if(producto_normal != null){
             if(producto_normal.getCantidad() >= 1){
                 txtDescripcion.setText(producto_normal.getDescripcion());
@@ -58,9 +67,11 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     
     public PanelDescripcionDeCompra(int opcCliente,boolean combo){
         this();
-        DatosDeProducto productoSQL = new DatosDeProducto();
-        Producto producto_normal = productoSQL.encontrarComboPromo(opcCliente);
+        productoSQL = new DatosDeProducto();
+        producto_normal = productoSQL.encontrarComboPromo(opcCliente);
         this.setId_producto(opcCliente);
+        this.setTipoItem(producto_normal.getTipo());
+        
         if(producto_normal !=  null){
             txtDescripcion.setText(producto_normal.getNombre());
             txtPrecio.setText(String.valueOf(producto_normal.getPrecio()));
@@ -77,6 +88,16 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     public void setId_producto(int id_producto) {
         this.id_producto = id_producto;
     }
+
+    public String getTipoItem() {
+        return tipoItem;
+    }
+
+    public void setTipoItem(String tipoItem) {
+        this.tipoItem = tipoItem;
+    }
+    
+    
     
     
 
@@ -226,6 +247,37 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMinimizarMouseClicked
 
     private void btnAddCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCarritoActionPerformed
+        int id_usuario = SesionUsuario.getIdUsuarioActual();
+        int id_producto = producto_normal.getId_producto();
+        datosCarrito = new DatosCarrito();
+        
+        if(producto_normal.getTipo() != null && !producto_normal.getTipo().isBlank()){
+            int id_carrito = datosCarrito.obtenerIdCarritoPorUsuario(id_usuario);
+            if(id_carrito > 0){
+                if(datosCarrito.agregarCarritoDetalle(id_carrito,id_producto,producto_normal.getTipo(), producto_normal.getPrecio())){
+                    JOptionPane.showMessageDialog(this, "Producto agregado con exito","Exito",1);
+                }else{
+                    JOptionPane.showMessageDialog(this, "No se pudo agregar este producto al carrito","Error",INFORMATION_MESSAGE);
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "No se pudo obtener o crear el carrito","Error",0);
+            }
+        
+        }else{
+            int id_carrito = datosCarrito.obtenerIdCarritoPorUsuario(id_usuario);
+            if(id_carrito > 0){
+                if(datosCarrito.agregarCarritoDetalle(id_carrito,id_producto,"Producto", producto_normal.getPrecio())){
+                    JOptionPane.showMessageDialog(this, "Producto agregado con exito","Exito",1);
+                }else{
+                    JOptionPane.showMessageDialog(this, "No se pudo agregar este producto al carrito","Error",INFORMATION_MESSAGE);
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "No se pudo obtener o crear el carrito","Error",0);
+            }
+        
+        
+        
+        }
         
     }//GEN-LAST:event_btnAddCarritoActionPerformed
 
