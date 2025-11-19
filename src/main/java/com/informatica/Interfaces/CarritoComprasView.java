@@ -44,6 +44,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
         jPanelHeader = new javax.swing.JPanel();
         jlabelLogo = new javax.swing.JLabel();
         jLabelTitulo = new javax.swing.JLabel();
+        btnInicio = new javax.swing.JButton();
         scrollPaneCarrito = new javax.swing.JScrollPane();
         panelProductos = new javax.swing.JPanel();
         panelInferior = new javax.swing.JPanel();
@@ -113,6 +114,20 @@ public class CarritoComprasView extends javax.swing.JFrame {
         jLabelTitulo.setForeground(new java.awt.Color(248, 245, 240));
         jLabelTitulo.setText("Carrito de Compras");
         jPanelHeader.add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
+
+        btnInicio.setBackground(new java.awt.Color(255, 211, 61));
+        btnInicio.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        btnInicio.setForeground(new java.awt.Color(26, 26, 26));
+        btnInicio.setText("menú");
+        btnInicio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(193, 39, 45), 2, true));
+        btnInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInicio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInicioActionPerformed(evt);
+            }
+        });
+        jPanelHeader.add(btnInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, 120, -1));
 
         jPanelSalida.add(jPanelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 910, 120));
 
@@ -221,6 +236,14 @@ public class CarritoComprasView extends javax.swing.JFrame {
         yMouse = evt.getY();
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
+    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
+        MenuMain main = new MenuMain();
+        main.setVisible(true);
+        main.setLocationRelativeTo(null);
+        setVisible(false);
+
+    }//GEN-LAST:event_btnInicioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,6 +281,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFinCompra;
+    private javax.swing.JButton btnInicio;
     private javax.swing.JLabel btnMaximizar;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
