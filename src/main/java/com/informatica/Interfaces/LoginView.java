@@ -223,19 +223,38 @@ public class LoginView extends javax.swing.JFrame {
        String contra = new String(txtPassword.getPassword());
        contra.trim();
        
-       Usuarios_1 user  = new Usuarios_1(correo,contra);
-       DatosDelUsuario userAdmin = new  DatosDelUsuario();
-       Usuarios_1 userFinal = userAdmin.iniciarSesion(user);
-       userFinal.setEmail(correo);
-       userFinal.setPass(contra);
-       if(userFinal != null){
-          MenuMain menu = new MenuMain();
-          menu.setVisible(true);
-          menu.setLocationRelativeTo(null);
-          setVisible(false);
+       if(!correo.isEmpty() || !correo.equals("Ingresa tu correo")){
+           if(!contra.isEmpty() || !contra.equals("******")){
+                Usuarios_1 user  = new Usuarios_1(correo,contra);
+                DatosDelUsuario userAdmin = new  DatosDelUsuario();
+                Usuarios_1 userFinal = userAdmin.iniciarSesion(user);
+                userFinal.setEmail(correo);
+                userFinal.setPass(contra);
+                if(userFinal != null){
+                    MenuMain menu = new MenuMain();
+                    menu.setVisible(true);
+                    menu.setLocationRelativeTo(null);
+                    setVisible(false);
+                }else{
+                    JOptionPane.showMessageDialog(null, "Credenciales invalidas", "Error", 0);
+                } 
+           
+           }else{
+               JOptionPane.showMessageDialog(this,
+                "Por favor ingresa una contraseña válida.",
+                "Campo inválido",
+                JOptionPane.WARNING_MESSAGE
+        );
+           }
        }else{
-            JOptionPane.showMessageDialog(null, "Credenciales invalidas", "Error", 0);
+           JOptionPane.showMessageDialog(this,
+                "Por favor ingresa un correo válido.",
+                "Campo inválido",
+                JOptionPane.WARNING_MESSAGE
+        );
        }
+       
+       
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnIrRegistroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIrRegistroMouseClicked

@@ -155,7 +155,8 @@ public class RegistroView extends javax.swing.JFrame {
         txtTelefono.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         txtTelefono.setForeground(new java.awt.Color(102, 102, 102));
         txtTelefono.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtTelefono.setText("Ingresa tu número de teléfono");
+        txtTelefono.setText("Ingresa tu numero de telefono");
+        txtTelefono.setToolTipText("");
         txtTelefono.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 3, true));
         txtTelefono.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -338,26 +339,38 @@ public class RegistroView extends javax.swing.JFrame {
         int telefono = Integer.parseInt(txtTelefono.getText());
         String contra = new String(txtPassword.getPassword());
         
-        CuponesDatos cupon = new CuponesDatos();
-        Usuarios_1 user = new Usuarios_1(nombre,email,telefono,contra);
-        DatosDelUsuario userAdmin = new DatosDelUsuario();
-        Usuarios_1 userFinal = userAdmin.agregarUsuario(user);
-        if(user != null){
-            user.setEstaLogeado(true);
-            JOptionPane.showMessageDialog(this, 
-        "¡Registro exitoso!\n" +
-        "Has recibido un cupón de bienvenida del 5%\n" +
-        "Código: DONPOLLOBIENVENIDA" + user.getId(),
-        "Registro Exitoso", 
-        JOptionPane.INFORMATION_MESSAGE);
-            cupon.asignarCupon(true, 1);
+        if ( !nombre.isEmpty() && !nombre.equals("Ingresa tu nombre") &&
+        !email.isEmpty() && !email.equals("Ingresa tu correo") &&
+        !contra.isEmpty() && !contra.equals("******") ){
+                CuponesDatos cupon = new CuponesDatos();
+                Usuarios_1 user = new Usuarios_1(nombre,email,telefono,contra);
+                DatosDelUsuario userAdmin = new DatosDelUsuario();
+                Usuarios_1 userFinal = userAdmin.agregarUsuario(user);
+                if(user != null){
+                    user.setEstaLogeado(true);
+                    JOptionPane.showMessageDialog(this, 
+                    "¡Te damos la bienvenida!\n" +
+                    "Has recibido un cupón de bienvenida del 5%\n" +
+                    "Código: DONPOLLOBIENVENIDA" + user.getId(),
+                    "Registro Exitoso", 
+                    JOptionPane.INFORMATION_MESSAGE);
+                    cupon.asignarCupon(true, 1);
             
-            MenuMain menu = new MenuMain();
-            menu.setVisible(true);
-            menu.setLocationRelativeTo(null);
-            setVisible(false);
+                    MenuMain menu = new MenuMain();
+                    menu.setVisible(true);
+                    menu.setLocationRelativeTo(null);
+                    setVisible(false);
         
+                }
+                } else {
+            JOptionPane.showMessageDialog(this,
+            "Debe completar todos los campos correctamente.",
+            "Campos inválidos",
+            JOptionPane.WARNING_MESSAGE);
         }
+        
+        
+       
     }//GEN-LAST:event_btnRegistrarseActionPerformed
 
     private void txtNombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombreMousePressed
