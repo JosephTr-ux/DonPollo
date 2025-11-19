@@ -19,7 +19,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
      */
     private int xMouse,yMouse;
     private CargarTipografias tipoFuente = new CargarTipografias();
-
+    private int id_producto;
     public PanelDescripcionDeCompra() {
         setUndecorated(true);
         initComponents();
@@ -40,7 +40,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         */
         DatosDeProducto productoSQL = new DatosDeProducto();
         Producto producto_normal = productoSQL.encontrarProducto(opcionCliente);
-        
+        this.setId_producto(opcionCliente);
         if(producto_normal != null){
             if(producto_normal.getCantidad() >= 1){
                 txtDescripcion.setText(producto_normal.getDescripcion());
@@ -60,6 +60,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         this();
         DatosDeProducto productoSQL = new DatosDeProducto();
         Producto producto_normal = productoSQL.encontrarComboPromo(opcCliente);
+        this.setId_producto(opcCliente);
         if(producto_normal !=  null){
             txtDescripcion.setText(producto_normal.getNombre());
             txtPrecio.setText(String.valueOf(producto_normal.getPrecio()));
@@ -68,6 +69,16 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         }
     
     }
+
+    public int getId_producto() {
+        return id_producto;
+    }
+
+    public void setId_producto(int id_producto) {
+        this.id_producto = id_producto;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -168,6 +179,11 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
         btnAddCarrito.setText("Agregar al Carrito");
         btnAddCarrito.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(248, 245, 240), 1, true));
         btnAddCarrito.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAddCarrito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddCarritoActionPerformed(evt);
+            }
+        });
         Background.add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 170, 40));
 
         areaDescripcion.setFont(new java.awt.Font("Bebas Neue", 0, 24)); // NOI18N
@@ -208,6 +224,10 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
     private void btnMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMinimizarMouseClicked
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_btnMinimizarMouseClicked
+
+    private void btnAddCarritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCarritoActionPerformed
+        
+    }//GEN-LAST:event_btnAddCarritoActionPerformed
 
     /**
      * @param args the command line arguments
