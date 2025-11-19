@@ -4,8 +4,10 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.DatosDeDireccion;
 import com.informatica.Interfaces.CargarTipografias;
 import com.informatica.Interfaces.MenuMain;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -173,6 +175,11 @@ public class DireccionView extends javax.swing.JFrame {
         btnFinPedido.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
         btnFinPedido.setForeground(new java.awt.Color(26, 26, 26));
         btnFinPedido.setText("Finalizar Pedido");
+        btnFinPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinPedidoActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnFinPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 680, 490));
@@ -210,6 +217,36 @@ public class DireccionView extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_jPanelSalidaMousePressed
+
+    private void btnFinPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinPedidoActionPerformed
+        String calle = jTextField1.getText().trim();
+        String ciudad = jTextField2.getText().trim();
+        String departamento = jTextField3.getText().trim();
+        
+        if (!calle.isEmpty() || !ciudad.isEmpty() || !departamento.isEmpty()) {
+            DatosDeDireccion datos = new DatosDeDireccion();
+            boolean guardado = datos.insertarDireccion(calle, ciudad, departamento);
+    
+            if (guardado) {
+                GraxCompra agradecimiento = new GraxCompra();
+                agradecimiento.setVisible(true);
+                agradecimiento.setLocationRelativeTo(null);
+                setVisible(false);
+            }else{
+                JOptionPane.showMessageDialog(null, 
+                "Error al guardar la dirección", 
+                 "Error", 
+                JOptionPane.ERROR_MESSAGE);
+            }
+        
+        }else{
+            JOptionPane.showMessageDialog(null, 
+                "No puedes tener un campo vacio", 
+                 "Campo Vacio", 
+                JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_btnFinPedidoActionPerformed
 
     /**
      * @param args the command line arguments
