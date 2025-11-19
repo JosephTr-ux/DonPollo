@@ -7,9 +7,6 @@ package com.informatica.Interfaces;
 import com.informatica.VentanasSecundarias.PanelDescripcionDeCompra;
 import com.informatica.clases.CarritoDeCompras;
 import com.informatica.clases.Producto;
-import com.informatica.clases.Usuarios_1;
-import java.awt.Component;
-import java.awt.Font;
 import java.awt.Image;
 import javax.swing.*;
 /**
@@ -374,53 +371,6 @@ public class PostresView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
-        Usuarios_1 usuario = new Usuarios_1();
-
-        JFrame frameUsuario = new JFrame("Datos del Usuario");
-        frameUsuario.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frameUsuario.setSize(400, 400);
-        frameUsuario.setLocationRelativeTo(null);
-
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
-
-        JLabel lblTitulo1 = new JLabel("Información del Usuario");
-        lblTitulo1.setFont(new Font("Segoe UI", Font.BOLD, 20));
-        lblTitulo1.setAlignmentX(Component.CENTER_ALIGNMENT);
-        panel.add(lblTitulo1);
-        panel.add(Box.createVerticalStrut(20));
-
-        JLabel lblNombre = new JLabel("Nombre: " + usuario.getNombre());
-        JLabel lblCorreo = new JLabel("Correo: " + usuario.getEmail());
-        JLabel lblTelefono = new JLabel("Teléfono: " + usuario.getNumeroTelefono());
-        JLabel lblDireccion = new JLabel("Dirección: " + usuario.getDeEnvio());
-
-        lblNombre.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblCorreo.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblTelefono.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-        lblDireccion.setFont(new Font("Segoe UI", Font.PLAIN, 16));
-
-        panel.add(lblNombre);
-        panel.add(lblCorreo);
-        panel.add(lblTelefono);
-        panel.add(lblDireccion);
-        panel.add(Box.createVerticalGlue());
-
-        JButton btnRegresar = new JButton("← Regresar");
-        btnRegresar.setAlignmentX(Component.CENTER_ALIGNMENT);
-        btnRegresar.addActionListener(e -> {
-            frameUsuario.dispose();
-            this.setVisible(true);
-        });
-
-        panel.add(Box.createVerticalStrut(20));
-        panel.add(btnRegresar);
-
-        frameUsuario.add(panel);
-        frameUsuario.setVisible(true);
-
-        this.setVisible(false);
 
     }//GEN-LAST:event_btnCarritoMouseClicked
 
@@ -432,31 +382,31 @@ public class PostresView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void jPanelPechugaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPechugaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(1);
+        opcUsuario = new PanelDescripcionDeCompra(16);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPechugaMouseClicked
 
     private void jPanelAlitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(2);
+        opcUsuario = new PanelDescripcionDeCompra(17);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitaMouseClicked
 
     private void jPanelPiernaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPiernaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(3);
+        opcUsuario = new PanelDescripcionDeCompra(18);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPiernaMouseClicked
 
     private void jPanelPicantePolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPicantePolloMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(4);
+        opcUsuario = new PanelDescripcionDeCompra(19);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPicantePolloMouseClicked
 
     private void jPanelAlitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitasMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(5);
+        opcUsuario = new PanelDescripcionDeCompra(20);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitasMouseClicked

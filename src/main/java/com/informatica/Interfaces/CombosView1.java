@@ -7,9 +7,6 @@ package com.informatica.Interfaces;
 import com.informatica.VentanasSecundarias.PanelDescripcionDeCompra;
 import com.informatica.clases.CarritoDeCompras;
 import com.informatica.clases.Producto;
-import com.informatica.clases.Usuarios_1;
-import java.awt.Component;
-import java.awt.Font;
 import java.awt.Image;
 import javax.swing.*;
 /**
@@ -21,8 +18,6 @@ public class CombosView1 extends javax.swing.JFrame {
     /**
      * Creates new form CombosView
      */
-    private CarritoDeCompras carrito = new CarritoDeCompras();
-    private Producto producto;
     private PanelDescripcionDeCompra opcUsuario;
     private  CargarTipografias tipoFuente;
     private int xMouse,yMouse;
@@ -194,7 +189,7 @@ public class CombosView1 extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Bebas Neue", 0, 85)); // NOI18N
         lblTitulo.setForeground(new java.awt.Color(26, 26, 26));
         lblTitulo.setText("Combos");
-       
+        
         background.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, -1, -1));
 
         jPanelPechuga.setBackground(new java.awt.Color(193, 39, 45));
@@ -386,31 +381,31 @@ public class CombosView1 extends javax.swing.JFrame {
 
 
     private void jPanelPechugaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPechugaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(1);
+        opcUsuario = new PanelDescripcionDeCompra(1,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPechugaMouseClicked
 
     private void jPanelAlitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(2);
+        opcUsuario = new PanelDescripcionDeCompra(2,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitaMouseClicked
 
     private void jPanelPiernaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPiernaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(3);
+        opcUsuario = new PanelDescripcionDeCompra(3,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPiernaMouseClicked
 
     private void jPanelPicantePolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPicantePolloMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(4);
+        opcUsuario = new PanelDescripcionDeCompra(4,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPicantePolloMouseClicked
 
     private void jPanelAlitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitasMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(5);
+        opcUsuario = new PanelDescripcionDeCompra(5,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitasMouseClicked

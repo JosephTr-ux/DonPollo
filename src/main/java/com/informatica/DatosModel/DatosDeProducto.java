@@ -32,6 +32,26 @@ public class DatosDeProducto {
         return null;
     }
     
+        public Producto encontrarComboPromo(int id_combo_promo){
+        String sql = "SELECT combo_promos.id_combo, combo_promos.nombre,combo_promos.descripcion,combo_promos.precio,combo_promos.tipo FROM combo_promos WHERE id_combo = ?";
+        try (Connection cn = Conexion.conectar();
+            PreparedStatement stmt = cn.prepareStatement(sql)){
+            stmt.setInt(1, id_combo_promo);
+            ResultSet resultado = stmt.executeQuery();
+            if(resultado.next()){
+                return new Producto(
+                        resultado.getInt("id_combo"),
+                        resultado.getFloat("precio"),
+                        resultado.getString("descripcion"),
+                        resultado.getString("tipo"),
+                        resultado.getString("nombre")
+                );
+            }
+            }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
     
     
 }

@@ -389,31 +389,31 @@ public class PromosView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void jPanelPechugaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPechugaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(1);
+        opcUsuario = new PanelDescripcionDeCompra(6,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPechugaMouseClicked
 
     private void jPanelAlitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(2);
+        opcUsuario = new PanelDescripcionDeCompra(7,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitaMouseClicked
 
     private void jPanelPiernaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPiernaMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(3);
+        opcUsuario = new PanelDescripcionDeCompra(8,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPiernaMouseClicked
 
     private void jPanelPicantePolloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelPicantePolloMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(4);
+        opcUsuario = new PanelDescripcionDeCompra(9,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelPicantePolloMouseClicked
 
     private void jPanelAlitasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelAlitasMouseClicked
-        opcUsuario = new PanelDescripcionDeCompra(5);
+        opcUsuario = new PanelDescripcionDeCompra(10,true);
         opcUsuario.setVisible(true);
         opcUsuario.setLocationRelativeTo(this);
     }//GEN-LAST:event_jPanelAlitasMouseClicked

@@ -7,10 +7,6 @@ package com.informatica.Interfaces;
 import com.informatica.VentanasSecundarias.PanelDescripcionDeCompra;
 import com.informatica.clases.CarritoDeCompras;
 import com.informatica.clases.Producto;
-import com.informatica.clases.Usuarios_1;
-import java.awt.Component;
-import java.awt.Font;
-import javax.swing.*;
 
 
 
@@ -664,18 +660,15 @@ public class IndividualesView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-        MenuMain main = new MenuMain();
-        main.setVisible(true);
-        main.setLocationRelativeTo(null);
+        MenuOpciones menu = new MenuOpciones();
+        menu.setVisible(true);
+        menu.setLocationRelativeTo(null);
         setVisible(false);
 
     }//GEN-LAST:event_btnMenuActionPerformed
 
     private void lblTituloMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTituloMouseClicked
-        MenuOpciones menu = new MenuOpciones();
-        menu.setVisible(true);
-        menu.setLocationRelativeTo(null);
-        setVisible(false);
+
     }//GEN-LAST:event_lblTituloMouseClicked
 
     private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
