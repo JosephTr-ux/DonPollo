@@ -4,6 +4,11 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.DatosModel.CuponesDatos;
+import com.informatica.DatosModel.SesionUsuario;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
+
 /**
  *
  * @author Temporal
@@ -14,8 +19,14 @@ public class CuponAddView extends javax.swing.JFrame {
      * Creates new form CuponAddView
      */
     private int xMouse,yMouse;
+    private CargarTipografias tipoFuente;
     public CuponAddView() {
+        setUndecorated(false);
         initComponents();
+        
+        tipoFuente = new CargarTipografias();
+        jLabel1.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
+        btnUsarCupon.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
     }
 
     /**
@@ -35,8 +46,8 @@ public class CuponAddView extends javax.swing.JFrame {
         jlabelLogo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtCodCupon = new javax.swing.JTextField();
+        btnUsarCupon = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,15 +116,20 @@ public class CuponAddView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(26, 26, 26));
         jLabel1.setText("Ingresa el codigo del cúpon:");
 
-        jTextField1.setBackground(new java.awt.Color(248, 245, 240));
-        jTextField1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(26, 26, 26));
-        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
+        txtCodCupon.setBackground(new java.awt.Color(248, 245, 240));
+        txtCodCupon.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
+        txtCodCupon.setForeground(new java.awt.Color(26, 26, 26));
+        txtCodCupon.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
 
-        jButton1.setBackground(new java.awt.Color(255, 211, 61));
-        jButton1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(26, 26, 26));
-        jButton1.setText("Usar Cupón");
+        btnUsarCupon.setBackground(new java.awt.Color(255, 211, 61));
+        btnUsarCupon.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        btnUsarCupon.setForeground(new java.awt.Color(26, 26, 26));
+        btnUsarCupon.setText("Usar Cupón");
+        btnUsarCupon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsarCuponActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -125,10 +141,10 @@ public class CuponAddView extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtCodCupon, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(324, 324, 324)
-                        .addComponent(jButton1)))
+                        .addComponent(btnUsarCupon)))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -137,9 +153,9 @@ public class CuponAddView extends javax.swing.JFrame {
                 .addGap(77, 77, 77)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
+                    .addComponent(txtCodCupon))
                 .addGap(71, 71, 71)
-                .addComponent(jButton1)
+                .addComponent(btnUsarCupon)
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
@@ -178,6 +194,17 @@ public class CuponAddView extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_jPanelSalidaMousePressed
+
+    private void btnUsarCuponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsarCuponActionPerformed
+        CuponesDatos cd = new CuponesDatos();
+        int id_user = SesionUsuario.getIdUsuarioActual();
+        String codeCupon = txtCodCupon.getText();
+        
+        if(cd.usarCupon(id_user, codeCupon)){
+            JOptionPane.showMessageDialog(this, "Cupon Usado con exito","Usado Exitosamente",INFORMATION_MESSAGE);
+        }else
+            JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
+    }//GEN-LAST:event_btnUsarCuponActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,12 +245,12 @@ public class CuponAddView extends javax.swing.JFrame {
     private javax.swing.JLabel btnMaximizar;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnUsarCupon;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelSalida;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel jlabelLogo;
+    private javax.swing.JTextField txtCodCupon;
     // End of variables declaration//GEN-END:variables
 }

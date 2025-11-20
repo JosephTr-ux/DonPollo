@@ -11,6 +11,7 @@ import java.sql.SQLException;
 
 import java.time.LocalDate;
 import java.time.Month;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -96,6 +97,40 @@ public class CuponesDatos {
                 ex.printStackTrace();
                 return false;
             }
+        return false;
+    }
+    
+    public boolean usarCupon(int id_usuario,String codeCupon){
+        boolean usado = false;
+        String sql = "SELECT cupon_owner.usado WHERE id_user = ? AND codigo_cupon = ? ";
+        String sql2 = "UPDATE cupon_owner SET usado = ? WHERE id_user = ? AND codigo_cupon = ?";
+        try(Connection cn = Conexion.conectar();
+              PreparedStatement stmt = cn.prepareStatement(sql)){
+                stmt.setInt(1, id_usuario);
+                stmt.setString(2,codeCupon);
+                ResultSet rs = stmt.executeQuery();
+                if(rs.next()){
+                     usado = rs.getBoolean("usado");
+                }
+                if(usado == false){
+                    try(PreparedStatement stmt2 = cn.prepareStatement(sql2)){
+                        stmt2.setBoolean(1, true);
+                        stmt2.setInt(2, id_usuario);
+                        stmt2.setString(3, codeCupon);
+                        return true; //true que si lo encontro y lo uso
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "Cupon ya usado","No te pases de listo eh", 0);
+                    return false; // Ya esta usado el cupon u ocurrio un error
+                
+                }
+                
+                
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+        
         return false;
     }
     
