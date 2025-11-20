@@ -26,12 +26,6 @@ public class DatosCarrito {
             buscarStmt.setInt(1, idUsuario);
             ResultSet rs = buscarStmt.executeQuery();
 
-            // Si ya existe carrito → lo regresamos
-            if (rs.next()) {
-                return rs.getInt("id_carrito");
-            }
-
-            // Si NO existe → lo creamos
             try (PreparedStatement crearStmt = cn.prepareStatement(crear, Statement.RETURN_GENERATED_KEYS)) {
                 crearStmt.setInt(1, idUsuario);
                 crearStmt.executeUpdate();

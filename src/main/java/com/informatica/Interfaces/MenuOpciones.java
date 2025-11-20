@@ -120,6 +120,11 @@ public class MenuOpciones extends javax.swing.JFrame {
 
         btnCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrito.png"))); // NOI18N
         btnCarrito.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCarrito.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCarritoMouseClicked(evt);
+            }
+        });
         jPanelHeader.add(btnCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, -1, -1));
 
         btnInicio.setBackground(new java.awt.Color(255, 211, 61));
@@ -360,6 +365,12 @@ public class MenuOpciones extends javax.swing.JFrame {
         postreMenu.setLocationRelativeTo(null);
         setVisible(false);
     }//GEN-LAST:event_postres_bckgMouseClicked
+
+    private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
+        CarritoComprasView carro = new CarritoComprasView();
+       carro.setVisible(true);
+       carro.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnCarritoMouseClicked
 
     /**
      * @param args the command line arguments

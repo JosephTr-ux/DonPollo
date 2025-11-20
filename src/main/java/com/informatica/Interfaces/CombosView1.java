@@ -368,7 +368,9 @@ public class CombosView1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
-       
+       CarritoComprasView carro = new CarritoComprasView();
+       carro.setVisible(true);
+       carro.setLocationRelativeTo(null);
 
     }//GEN-LAST:event_btnCarritoMouseClicked
 

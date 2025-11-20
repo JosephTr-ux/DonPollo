@@ -6,6 +6,7 @@ package com.informatica.VentanasSecundarias;
 
 import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.DatosDeProducto;
+import com.informatica.DatosModel.ItemsEnCarrito;
 import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CargarTipografias;
 import com.informatica.clases.Producto;
@@ -256,6 +257,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
             if(id_carrito > 0){
                 if(datosCarrito.agregarCarritoDetalle(id_carrito,id_producto,producto_normal.getTipo(), producto_normal.getPrecio())){
                     JOptionPane.showMessageDialog(this, "Producto agregado con exito","Exito",1);
+                    ItemsEnCarrito.agregarProducto(producto_normal);
                 }else{
                     JOptionPane.showMessageDialog(this, "No se pudo agregar este producto al carrito","Error",INFORMATION_MESSAGE);
                 }
@@ -268,6 +270,7 @@ public class PanelDescripcionDeCompra extends javax.swing.JFrame {
             if(id_carrito > 0){
                 if(datosCarrito.agregarCarritoDetalle(id_carrito,id_producto,"Producto", producto_normal.getPrecio())){
                     JOptionPane.showMessageDialog(this, "Producto agregado con exito","Exito",1);
+                    ItemsEnCarrito.agregarProducto(producto_normal);
                 }else{
                     JOptionPane.showMessageDialog(this, "No se pudo agregar este producto al carrito","Error",INFORMATION_MESSAGE);
                 }

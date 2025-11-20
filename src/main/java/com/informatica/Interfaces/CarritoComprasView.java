@@ -4,6 +4,13 @@
  */
 package com.informatica.Interfaces;
 
+import com.informatica.DatosModel.ItemsEnCarrito;
+import com.informatica.VentanasSecundarias.CompraFinalCupon;
+import com.informatica.clases.Producto;
+import java.awt.*;
+import java.util.ArrayList;
+import javax.swing.*;
+
 /**
  *
  * @author Temporal
@@ -16,14 +23,17 @@ public class CarritoComprasView extends javax.swing.JFrame {
     private int xMouse,yMouse;
     private CargarTipografias tipoFuente;
     public CarritoComprasView() {
+        setUndecorated(true);
         initComponents();
         tipoFuente = new CargarTipografias();
         
-        btnVolver.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 32));
         btnFinCompra.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 36));
         btnVaciar.setFont(tipoFuente.fuente(tipoFuente.BebasNeue, 0, 32));
         
         jLabelTitulo.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,60));
+        
+        cargarProductosEnCarrito();
+        actualizarTotal();
         
     }
 
@@ -48,9 +58,10 @@ public class CarritoComprasView extends javax.swing.JFrame {
         scrollPaneCarrito = new javax.swing.JScrollPane();
         panelProductos = new javax.swing.JPanel();
         panelInferior = new javax.swing.JPanel();
-        btnVolver = new javax.swing.JButton();
         btnVaciar = new javax.swing.JButton();
         btnFinCompra = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,13 +155,6 @@ public class CarritoComprasView extends javax.swing.JFrame {
 
         panelInferior.setBackground(new java.awt.Color(193, 39, 45));
 
-        btnVolver.setBackground(new java.awt.Color(255, 211, 61));
-        btnVolver.setFont(new java.awt.Font("Bebas Neue", 0, 32)); // NOI18N
-        btnVolver.setForeground(new java.awt.Color(26, 26, 26));
-        btnVolver.setText("Volver");
-        btnVolver.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 26, 26)));
-        btnVolver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
         btnVaciar.setBackground(new java.awt.Color(255, 211, 61));
         btnVaciar.setFont(new java.awt.Font("Bebas Neue", 0, 32)); // NOI18N
         btnVaciar.setForeground(new java.awt.Color(26, 26, 26));
@@ -164,28 +168,57 @@ public class CarritoComprasView extends javax.swing.JFrame {
         btnFinCompra.setText("Finalizar Compra");
         btnFinCompra.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 26, 26)));
         btnFinCompra.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnFinCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinCompraActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 211, 61));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 26, 26)));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(lblTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout panelInferiorLayout = new javax.swing.GroupLayout(panelInferior);
         panelInferior.setLayout(panelInferiorLayout);
         panelInferiorLayout.setHorizontalGroup(
             panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInferiorLayout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                .addComponent(btnFinCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(86, 86, 86)
+                .addGap(59, 59, 59)
                 .addComponent(btnVaciar, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(102, 102, 102))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addComponent(btnFinCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(87, 87, 87)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
         );
         panelInferiorLayout.setVerticalGroup(
             panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInferiorLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVolver)
-                    .addComponent(btnVaciar)
-                    .addComponent(btnFinCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelInferiorLayout.createSequentialGroup()
+                .addGroup(panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelInferiorLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelInferiorLayout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addGroup(panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnVaciar)
+                            .addComponent(btnFinCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(45, 45, 45))
         );
 
@@ -244,6 +277,13 @@ public class CarritoComprasView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnInicioActionPerformed
 
+    private void btnFinCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinCompraActionPerformed
+        CompraFinalCupon askCupon = new  CompraFinalCupon();
+        askCupon.setVisible(true);
+        askCupon.setLocationRelativeTo(null);
+        
+    }//GEN-LAST:event_btnFinCompraActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -278,6 +318,158 @@ public class CarritoComprasView extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void cargarProductosEnCarrito(){
+        panelProductos.removeAll();
+        
+        ArrayList<Producto> productos = ItemsEnCarrito.getProductos();
+        
+        if(productos == null || productos.isEmpty()){
+            mostrarCarritoVacio();
+        }else{
+            for(Producto producto: productos){
+                JPanel itemPanel = crearPanelProducto(producto);
+                panelProductos.add(itemPanel);
+                panelProductos.add(Box.createRigidArea(new Dimension(0,12)));
+            }
+        }
+        panelProductos.revalidate();
+        panelProductos.repaint();
+        
+    }
+        
+        private void mostrarCarritoVacio() {
+            JLabel lblVacio = new JLabel("Tu carrito está vacío");
+            lblVacio.setFont(new Font(tipoFuente.BebasNeue,0,48));
+            lblVacio.setForeground(new Color(26,26,26));
+            lblVacio.setAlignmentX(Component.CENTER_ALIGNMENT);
+        
+            panelProductos.add(Box.createVerticalGlue());
+            panelProductos.add(lblVacio);
+            panelProductos.add(Box.createVerticalGlue());
+    }
+        
+        private JPanel crearPanelProducto(Producto producto){
+            JPanel panel = new JPanel();
+            panel.setLayout(new BorderLayout(15,10));
+            
+            boolean esCombo = producto.getTipo() != null && !producto.getTipo().isBlank();
+            if(esCombo){
+                panel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(73,49,44)), // Borde naranja
+                BorderFactory.createEmptyBorder(15, 18, 15, 18)
+            ));
+                panel.setBackground(new Color(255, 250, 240)); // Fondo crema
+                panel.setMaximumSize(new Dimension(870, 125)); // Ajustado al ancho del panel
+            }else{
+                panel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(200, 200, 200), 2),
+                BorderFactory.createEmptyBorder(12, 18, 12, 18)
+            ));
+            panel.setBackground(Color.WHITE);
+            panel.setMaximumSize(new Dimension(870, 100));
+            }
+            
+            JPanel infoPanel = new JPanel();
+            infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
+            infoPanel.setBackground(esCombo ? new Color(255, 250, 240) : Color.WHITE);
+            
+            if (esCombo) {
+            // --- COMBO ---
+            // Etiqueta "COMBO"
+            JLabel lblTipoCombo = new JLabel("COMBOS O PROMOCIONES");
+            lblTipoCombo.setFont(new Font("Bebas Neue",Font.BOLD,18));
+            lblTipoCombo.setForeground(new Color(255, 140, 0)); // Naranja oscuro
+            infoPanel.add(lblTipoCombo);
+            infoPanel.add(Box.createRigidArea(new Dimension(0, 5)));
+            
+            // Nombre del combo - Lobster para destacar
+            JLabel lblNombre = new JLabel(producto.getNombre());
+            lblNombre.setFont(new Font("Lobster", Font.PLAIN, 22));
+            lblNombre.setForeground(new Color(51, 51, 51));
+            infoPanel.add(lblNombre);
+            infoPanel.add(Box.createRigidArea(new Dimension(0, 6)));
+            
+            // Descripción del combo
+            JLabel lblDescripcion = new JLabel("<html><body style='width: 450px'>" + producto.getDescripcion() + "</body></html>");
+            lblDescripcion.setFont(new Font("Bebas Neue",Font.PLAIN,16));
+            lblDescripcion.setForeground(new Color(100, 100, 100));
+            infoPanel.add(lblDescripcion);
+            
+            // Tipo de combo
+            if (producto.getTipo() != null && !producto.getTipo().isEmpty()) {
+                JLabel lblTipo = new JLabel("• " + producto.getTipo());
+                lblTipo.setFont(new Font("Bebas Neue",Font.PLAIN,16));
+                lblTipo.setForeground(new Color(120, 120, 120));
+                infoPanel.add(Box.createRigidArea(new Dimension(0, 4)));
+                infoPanel.add(lblTipo);
+            }
+            }else{
+                // --- PRODUCTO SIMPLE ---
+            // Descripción (nombre del producto) - Bebas Neue para texto normal
+            JLabel lblDescripcion = new JLabel(producto.getDescripcion());
+            lblDescripcion.setFont(new Font("Bebas Neue", Font.BOLD, 24));
+            lblDescripcion.setForeground(new Color(51, 51, 51));
+            infoPanel.add(lblDescripcion);
+            infoPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+            
+            // Cantidad con estilo
+            JLabel lblCantidad = new JLabel("Cantidad: 1" );
+            lblCantidad.setFont(new Font("Bebas Neue", Font.PLAIN, 16));
+            lblCantidad.setForeground(new Color(120, 120, 120));
+            infoPanel.add(lblCantidad);
+            }
+            JPanel precioPanel = new JPanel();
+            precioPanel.setLayout(new BoxLayout(precioPanel, BoxLayout.Y_AXIS));
+            precioPanel.setBackground(esCombo ? new Color(255, 250, 240) : Color.WHITE);
+            precioPanel.setAlignmentY(Component.CENTER_ALIGNMENT);
+        
+        // Precio principal - Lobster para destacar
+            JLabel lblPrecio = new JLabel(String.format("Q %.2f", producto.getPrecio()));
+            lblPrecio.setFont(new Font("Lobster", Font.BOLD, 26));
+            lblPrecio.setForeground(new Color(193,39,45)); // Rojo
+            precioPanel.add(lblPrecio);
+        
+        
+        // Agregar componentes al panel principal
+            panel.add(infoPanel, BorderLayout.CENTER);
+            panel.add(precioPanel, BorderLayout.EAST);
+        
+            return panel;
+        }
+        
+         public void actualizarCarrito() {
+        cargarProductosEnCarrito();
+    }
+         
+         public float calcularTotal() {
+        float total = 0;
+        ArrayList<Producto> productos = ItemsEnCarrito.getProductos();
+        
+        if (productos != null) {
+            for (Producto p : productos) {
+                // Si es combo, solo sumar el precio
+                boolean esCombo = p.getTipo() != null && !p.getTipo().isEmpty();
+                if (esCombo) {
+                    total += p.getPrecio();
+                } else {
+                    // Si es producto simple, multiplicar por cantidad
+                    total += p.getPrecio() * p.getCantidad();
+                }
+            }
+        }
+        
+        return total;
+    }
+         
+         public void actualizarTotal() {
+    float total = calcularTotal();
+    // Si tienes un JLabel llamado lblTotal en el south:
+    lblTotal.setText(String.format("Total: Q %.2f", total));
+    lblTotal.setFont(new Font("Bebas Neue", Font.PLAIN, 28));
+    lblTotal.setForeground(new Color(26,26,26));
+}
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFinCompra;
@@ -286,11 +478,12 @@ public class CarritoComprasView extends javax.swing.JFrame {
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
     private javax.swing.JButton btnVaciar;
-    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabelTitulo;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelSalida;
     private javax.swing.JLabel jlabelLogo;
+    private javax.swing.JLabel lblTotal;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JPanel panelInferior;
     private javax.swing.JPanel panelProductos;
