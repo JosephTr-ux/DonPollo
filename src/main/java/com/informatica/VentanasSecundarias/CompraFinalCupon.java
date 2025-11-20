@@ -4,6 +4,7 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CuponAddView;
@@ -187,7 +188,10 @@ public class CompraFinalCupon extends javax.swing.JFrame {
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
         DatosCarrito dc = new DatosCarrito();
+        CuponesDatos asigCupon = new CuponesDatos();
         int idUser = SesionUsuario.getIdUsuarioActual();
+        asigCupon.asignarCupon(idUser);
+        asigCupon.asignarCupon(idUser, this.getTotalCompra());
         
         dc.finalizarCompra(idUser, this.getTotalCompra(), null);
         

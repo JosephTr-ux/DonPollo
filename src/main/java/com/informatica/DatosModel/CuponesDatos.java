@@ -72,11 +72,11 @@ public class CuponesDatos {
         }else return false;
     }
     
-    public boolean asignarCupon(int id_user,int cantidadCompras){
+    public boolean asignarCupon(int id_user){
         int cantidad = 0;
         String sql1 = "SELECT COUNT(*) AS TOTAL"
                 + " FROM carrito_compras"
-                + " WHERE id_user = ?";
+                + " WHERE id_user = ? AND estado = true";
         String sql2 = "INSERT INTO cupon_owner (codigo_cupon,id_user,usado) VALUES (?,?,?)";
         try{
                        Connection cn = Conexion.conectar();

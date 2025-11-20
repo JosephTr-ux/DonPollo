@@ -4,6 +4,7 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.DatosDeDireccion;
 import com.informatica.DatosModel.ItemsEnCarrito;
@@ -37,7 +38,6 @@ public class DireccionView extends javax.swing.JFrame {
         jLabelagrega.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
         jLabelantesde.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
         btnFinPedido.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,36));
-        
         
         
     }
@@ -233,6 +233,7 @@ public class DireccionView extends javax.swing.JFrame {
             boolean guardado = datos.insertarDireccion(calle, ciudad, departamento);
             int id_user = SesionUsuario.getIdUsuarioActual();
             
+            
             if (guardado) {
                 GraxCompra agradecimiento = new GraxCompra();
                 agradecimiento.setVisible(true);
@@ -240,6 +241,7 @@ public class DireccionView extends javax.swing.JFrame {
                 setVisible(false);
                 ItemsEnCarrito.vaciarCarrito();
                 dc.finalizarCompra(id_user);
+                
                 
             }else{
                 JOptionPane.showMessageDialog(null, 

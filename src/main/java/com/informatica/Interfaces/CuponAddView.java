@@ -233,12 +233,18 @@ public class CuponAddView extends javax.swing.JFrame {
             jLabelNuevoTotal.setText(String.valueOf(precioConCupon));
             jLabelNuevoTotal.setVisible(true);
             carrito.finalizarCompra(id_user, precioConCupon, codeCupon);
+            this.setPrecioNormal(precioConCupon);
         }else{
             JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
         }
     }//GEN-LAST:event_btnUsarCuponActionPerformed
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+        CuponesDatos asigCupon = new CuponesDatos();
+        int id_user = SesionUsuario.getIdUsuarioActual();
+        
+        asigCupon.asignarCupon(id_user);
+        asigCupon.asignarCupon(id_user, this.getPrecioNormal());
         DireccionView dw = new DireccionView();
             dw.setVisible(true);
             dw.setLocationRelativeTo(null);
