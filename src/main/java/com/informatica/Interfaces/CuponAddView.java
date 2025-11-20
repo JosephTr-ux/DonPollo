@@ -5,8 +5,10 @@
 package com.informatica.Interfaces;
 
 import com.informatica.DatosModel.CuponesDatos;
+import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.VentanasSecundarias.DireccionView;
+import com.informatica.clases.Cupones;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
@@ -21,6 +23,8 @@ public class CuponAddView extends javax.swing.JFrame {
      */
     private int xMouse,yMouse;
     private CargarTipografias tipoFuente;
+    private CuponesDatos cd;
+    private float precioNormal;
     public CuponAddView() {
         setUndecorated(false);
         initComponents();
@@ -30,6 +34,24 @@ public class CuponAddView extends javax.swing.JFrame {
         btnUsarCupon.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
     }
 
+    public CuponAddView(float precioSinCupon){
+        this();
+        jLabelNuevoTotal.setVisible(false);
+        this.setPrecioNormal(precioSinCupon);
+        
+        
+    }
+
+    public float getPrecioNormal() {
+        return precioNormal;
+    }
+
+    public void setPrecioNormal(float precioNormal) {
+        this.precioNormal = precioNormal;
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,6 +71,9 @@ public class CuponAddView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtCodCupon = new javax.swing.JTextField();
         btnUsarCupon = new javax.swing.JButton();
+        btnSiguiente = new javax.swing.JButton();
+        jLabelNuevoTotal = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -112,15 +137,18 @@ public class CuponAddView extends javax.swing.JFrame {
         getContentPane().add(jPanelHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 35, 910, 120));
 
         jPanel1.setBackground(new java.awt.Color(248, 245, 240));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(26, 26, 26));
         jLabel1.setText("Ingresa el codigo del cúpon:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         txtCodCupon.setBackground(new java.awt.Color(248, 245, 240));
         txtCodCupon.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         txtCodCupon.setForeground(new java.awt.Color(26, 26, 26));
         txtCodCupon.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(26, 26, 26), 2, true));
+        jPanel1.add(txtCodCupon, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 366, 59));
 
         btnUsarCupon.setBackground(new java.awt.Color(255, 211, 61));
         btnUsarCupon.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
@@ -131,34 +159,28 @@ public class CuponAddView extends javax.swing.JFrame {
                 btnUsarCuponActionPerformed(evt);
             }
         });
+        jPanel1.add(btnUsarCupon, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtCodCupon, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(324, 324, 324)
-                        .addComponent(btnUsarCupon)))
-                .addContainerGap(54, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtCodCupon))
-                .addGap(71, 71, 71)
-                .addComponent(btnUsarCupon)
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
+        btnSiguiente.setBackground(new java.awt.Color(255, 211, 61));
+        btnSiguiente.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        btnSiguiente.setForeground(new java.awt.Color(26, 26, 26));
+        btnSiguiente.setText("Siguiente");
+        btnSiguiente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSiguienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSiguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 210, 70));
+
+        jLabelNuevoTotal.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabelNuevoTotal.setForeground(new java.awt.Color(26, 26, 26));
+        jLabelNuevoTotal.setText("q.9999.00");
+        jPanel1.add(jLabelNuevoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(26, 26, 26));
+        jLabel3.setText("Nuevo Total:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 910, 310));
 
@@ -197,19 +219,31 @@ public class CuponAddView extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnUsarCuponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsarCuponActionPerformed
-        CuponesDatos cd = new CuponesDatos();
+        cd = new CuponesDatos();
+        DatosCarrito carrito = new DatosCarrito();
+        
         int id_user = SesionUsuario.getIdUsuarioActual();
+        float precioConCupon = 0;
         String codeCupon = txtCodCupon.getText();
         
-        if(cd.usarCupon(id_user, codeCupon)){
+        Cupones cuponUsado = cd.usarCupon(id_user, codeCupon);
+        if(cuponUsado != null ){
             JOptionPane.showMessageDialog(this, "Cupon Usado con exito","Usado Exitosamente",INFORMATION_MESSAGE);
-            DireccionView dw = new DireccionView();
+            precioConCupon = cuponUsado.getDescuento() * this.getPrecioNormal();
+            jLabelNuevoTotal.setText(String.valueOf(precioConCupon));
+            jLabelNuevoTotal.setVisible(true);
+            carrito.finalizarCompra(id_user, precioConCupon, codeCupon);
+        }else{
+            JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
+        }
+    }//GEN-LAST:event_btnUsarCuponActionPerformed
+
+    private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
+        DireccionView dw = new DireccionView();
             dw.setVisible(true);
             dw.setLocationRelativeTo(null);
             setVisible(false);
-        }else
-            JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
-    }//GEN-LAST:event_btnUsarCuponActionPerformed
+    }//GEN-LAST:event_btnSiguienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,8 +284,11 @@ public class CuponAddView extends javax.swing.JFrame {
     private javax.swing.JLabel btnMaximizar;
     private javax.swing.JLabel btnMinimizar;
     private javax.swing.JLabel btnSalir;
+    private javax.swing.JButton btnSiguiente;
     private javax.swing.JButton btnUsarCupon;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabelNuevoTotal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelSalida;

@@ -4,6 +4,7 @@
  */
 package com.informatica.DatosModel;
 
+import com.informatica.clases.Cupones;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -100,9 +101,9 @@ public class CuponesDatos {
         return false;
     }
     
-    public boolean usarCupon(int id_usuario,String codeCupon){
+    public Cupones usarCupon(int id_usuario,String codeCupon){
         boolean usado = false;
-        String sql = "SELECT cupon_owner.usado WHERE id_user = ? AND codigo_cupon = ? ";
+        String sql = "SELECT cupon_owner.usado cupon_owner.descuento WHERE id_user = ? AND codigo_cupon = ? ";
         String sql2 = "UPDATE cupon_owner SET usado = ? WHERE id_user = ? AND codigo_cupon = ?";
         try(Connection cn = Conexion.conectar();
               PreparedStatement stmt = cn.prepareStatement(sql)){
@@ -117,11 +118,16 @@ public class CuponesDatos {
                         stmt2.setBoolean(1, true);
                         stmt2.setInt(2, id_usuario);
                         stmt2.setString(3, codeCupon);
-                        return true; //true que si lo encontro y lo uso
+                        ResultSet rs2 = stmt2.executeQuery();
+                        return new Cupones(
+                                codeCupon,
+                                rs2.getFloat("descuento"),
+                                rs2.getBoolean("activo")
+                        ); //true que si lo encontro y lo uso
                     }
                 }else{
                     JOptionPane.showMessageDialog(null, "Cupon ya usado","No te pases de listo eh", 0);
-                    return false; // Ya esta usado el cupon u ocurrio un error
+                    return null; // Ya esta usado el cupon u ocurrio un error
                 
                 }
                 
@@ -131,7 +137,7 @@ public class CuponesDatos {
         }
         
         
-        return false;
+        return null;
     }
     
 }

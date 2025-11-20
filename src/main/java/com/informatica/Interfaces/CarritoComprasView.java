@@ -33,9 +33,10 @@ public class CarritoComprasView extends javax.swing.JFrame {
         jLabelTitulo.setFont(tipoFuente.fuente(tipoFuente.Lobster,0,60));
         
         cargarProductosEnCarrito();
-        actualizarTotal();
         
+        actualizarTotal();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -158,9 +159,14 @@ public class CarritoComprasView extends javax.swing.JFrame {
         btnVaciar.setBackground(new java.awt.Color(255, 211, 61));
         btnVaciar.setFont(new java.awt.Font("Bebas Neue", 0, 32)); // NOI18N
         btnVaciar.setForeground(new java.awt.Color(26, 26, 26));
-        btnVaciar.setText("Vaciar Carrito");
+        btnVaciar.setText("Refrescar");
         btnVaciar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(26, 26, 26)));
         btnVaciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVaciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVaciarActionPerformed(evt);
+            }
+        });
 
         btnFinCompra.setBackground(new java.awt.Color(255, 211, 61));
         btnFinCompra.setFont(new java.awt.Font("Bebas Neue", 0, 36)); // NOI18N
@@ -199,9 +205,9 @@ public class CarritoComprasView extends javax.swing.JFrame {
         panelInferiorLayout.setHorizontalGroup(
             panelInferiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInferiorLayout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(60, 60, 60)
                 .addComponent(btnVaciar, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addComponent(btnFinCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -278,11 +284,18 @@ public class CarritoComprasView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioActionPerformed
 
     private void btnFinCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinCompraActionPerformed
-        CompraFinalCupon askCupon = new  CompraFinalCupon();
+        float totalPrecio = this.calcularTotal();
+        CompraFinalCupon askCupon = new  CompraFinalCupon(totalPrecio);
         askCupon.setVisible(true);
         askCupon.setLocationRelativeTo(null);
         
     }//GEN-LAST:event_btnFinCompraActionPerformed
+
+    private void btnVaciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVaciarActionPerformed
+         actualizarCarrito(); 
+    
+    
+    }//GEN-LAST:event_btnVaciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -454,7 +467,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
                     total += p.getPrecio();
                 } else {
                     // Si es producto simple, multiplicar por cantidad
-                    total += p.getPrecio() * p.getCantidad();
+                    total += p.getPrecio() *1;
                 }
             }
         }
@@ -464,10 +477,11 @@ public class CarritoComprasView extends javax.swing.JFrame {
          
          public void actualizarTotal() {
     float total = calcularTotal();
-    // Si tienes un JLabel llamado lblTotal en el south:
-    lblTotal.setText(String.format("Total: Q %.2f", total));
+    
+    lblTotal.setText(String.format("Q %.2f", total));
     lblTotal.setFont(new Font("Bebas Neue", Font.PLAIN, 28));
     lblTotal.setForeground(new Color(26,26,26));
+    
 }
     
 

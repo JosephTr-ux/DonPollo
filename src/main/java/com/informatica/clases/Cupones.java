@@ -17,11 +17,6 @@ public class Cupones {
     public Cupones() {
     }
 
-    public Cupones(String Codigo, float Descuento) {
-        this.Codigo = Codigo;
-        this.Descuento = Descuento;
-    }
-
     public Cupones(String codigo, float descuento, boolean cuponUsado) {
         Codigo = codigo;
         Descuento = descuento;

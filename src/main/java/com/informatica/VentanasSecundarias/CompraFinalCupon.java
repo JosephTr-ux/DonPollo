@@ -4,6 +4,8 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.DatosCarrito;
+import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CuponAddView;
 
 /**
@@ -16,10 +18,26 @@ public class CompraFinalCupon extends javax.swing.JFrame {
      * Creates new form CompraFinalCupon
      */
     private int xMouse,yMouse;
+    private float totalCompra;
     public CompraFinalCupon() {
         initComponents();
     }
+    
+    public CompraFinalCupon(float total){
+        this();
+        this.setTotalCompra(total);
+    }
 
+    public float getTotalCompra() {
+        return totalCompra;
+    }
+
+    public void setTotalCompra(float totalCompra) {
+        this.totalCompra = totalCompra;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -168,6 +186,12 @@ public class CompraFinalCupon extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
+        DatosCarrito dc = new DatosCarrito();
+        int idUser = SesionUsuario.getIdUsuarioActual();
+        
+        dc.finalizarCompra(idUser, this.getTotalCompra(), null);
+        
+        
         DireccionView adddireccion = new DireccionView();
         adddireccion.setVisible(true);
         adddireccion.setLocationRelativeTo(this);
@@ -175,7 +199,7 @@ public class CompraFinalCupon extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoMouseClicked
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        CuponAddView cuponAdd = new CuponAddView();
+        CuponAddView cuponAdd = new CuponAddView(this.getTotalCompra());
         cuponAdd.setVisible(true);
         cuponAdd.setLocationRelativeTo(null);
         setVisible(false);

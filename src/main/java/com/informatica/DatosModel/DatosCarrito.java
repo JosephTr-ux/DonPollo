@@ -83,6 +83,20 @@ public class DatosCarrito {
         }
     
     }
+    
+    public void finalizarCompra(int id_usuario,float precio, String cuponCode){
+        String sql = "UPDATE carrito_compras SET codigo_cupon = ?, precio_final = ? WHERE id_usuario = ? AND  estado = ?";
+        try(Connection cn = Conexion.conectar();
+              PreparedStatement ps = cn.prepareStatement(sql)){
+                ps.setString(1,cuponCode);
+                ps.setFloat(2, precio);
+                ps.setInt(3, id_usuario);
+                ps.setBoolean(4, false);
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        
+    }
 
 }
 
