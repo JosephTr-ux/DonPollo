@@ -6,6 +6,7 @@ package com.informatica.Interfaces;
 
 import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.SesionUsuario;
+import com.informatica.VentanasSecundarias.DireccionView;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
@@ -202,6 +203,10 @@ public class CuponAddView extends javax.swing.JFrame {
         
         if(cd.usarCupon(id_user, codeCupon)){
             JOptionPane.showMessageDialog(this, "Cupon Usado con exito","Usado Exitosamente",INFORMATION_MESSAGE);
+            DireccionView dw = new DireccionView();
+            dw.setVisible(true);
+            dw.setLocationRelativeTo(null);
+            setVisible(false);
         }else
             JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
     }//GEN-LAST:event_btnUsarCuponActionPerformed

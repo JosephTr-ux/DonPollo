@@ -17,14 +17,19 @@ import java.sql.Statement;
 public class DatosCarrito {
     public int obtenerIdCarritoPorUsuario(int idUsuario) {
 
-        String buscar = "SELECT id_carrito FROM carrito_compras WHERE id_usuario = ?";
+        String buscar = "SELECT id_carrito FROM carrito_compras WHERE id_usuario = ? AND estado = ?";
         String crear  = "INSERT INTO carrito_compras (id_usuario) VALUES (?)";
 
         try (Connection cn = Conexion.conectar();
              PreparedStatement buscarStmt = cn.prepareStatement(buscar)) {
 
             buscarStmt.setInt(1, idUsuario);
+            buscarStmt.setBoolean(2, false);
             ResultSet rs = buscarStmt.executeQuery();
+            
+            if(rs.next()){
+                return rs.getInt("id_carrito");
+            }
 
             try (PreparedStatement crearStmt = cn.prepareStatement(crear, Statement.RETURN_GENERATED_KEYS)) {
                 crearStmt.setInt(1, idUsuario);
@@ -62,6 +67,21 @@ public class DatosCarrito {
         }
         
         return false;
+    }
+    
+    public void finalizarCompra(int id_usuario){
+        String sql = "UPDATE carrito_compras SET estado = ? WHERE id_usuario = ? AND  estado = ?";
+        try(Connection cn = Conexion.conectar();
+              PreparedStatement ps = cn.prepareStatement(sql)){
+                ps.setBoolean(1,true);
+                ps.setInt(2, id_usuario);
+                ps.setBoolean(3, false);
+            
+            
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    
     }
 
 }

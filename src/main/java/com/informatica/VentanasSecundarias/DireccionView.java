@@ -4,9 +4,13 @@
  */
 package com.informatica.VentanasSecundarias;
 
+import com.informatica.DatosModel.DatosCarrito;
 import com.informatica.DatosModel.DatosDeDireccion;
+import com.informatica.DatosModel.ItemsEnCarrito;
+import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CargarTipografias;
 import com.informatica.Interfaces.MenuMain;
+import com.informatica.clases.Producto;
 import javax.swing.JOptionPane;
 
 /**
@@ -180,7 +184,7 @@ public class DireccionView extends javax.swing.JFrame {
                 btnFinPedidoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnFinPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
+        jPanel1.add(btnFinPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 680, 490));
 
@@ -225,13 +229,18 @@ public class DireccionView extends javax.swing.JFrame {
         
         if (!calle.isEmpty() || !ciudad.isEmpty() || !departamento.isEmpty()) {
             DatosDeDireccion datos = new DatosDeDireccion();
+            DatosCarrito dc = new DatosCarrito();
             boolean guardado = datos.insertarDireccion(calle, ciudad, departamento);
-    
+            int id_user = SesionUsuario.getIdUsuarioActual();
+            
             if (guardado) {
                 GraxCompra agradecimiento = new GraxCompra();
                 agradecimiento.setVisible(true);
                 agradecimiento.setLocationRelativeTo(null);
                 setVisible(false);
+                ItemsEnCarrito.vaciarCarrito();
+                dc.finalizarCompra(id_user);
+                
             }else{
                 JOptionPane.showMessageDialog(null, 
                 "Error al guardar la dirección", 

@@ -30,6 +30,10 @@ public class ItemsEnCarrito {
         ItemsEnCarrito.productos = productos;
     }
     
+    public static void vaciarCarrito(){
+        productos.clear();
+    }
+    
     
     
 }
