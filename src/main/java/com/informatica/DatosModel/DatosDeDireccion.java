@@ -15,10 +15,8 @@ public class DatosDeDireccion {
         
         // Obtener el ID del usuario actual
         int idUsuario = SesionUsuario.getIdUsuarioActual();
-        System.out.println("ID Usuario actual: " + idUsuario);
         
         if (idUsuario <= 0) {
-            System.out.println("Error: No hay usuario en sesión");
             return false;
         }
         
@@ -33,22 +31,20 @@ public class DatosDeDireccion {
             ps.setString(3, ciudad);
             ps.setString(4, departamento);
             
-            System.out.println("Ejecutando");
             int filasAfectadas = ps.executeUpdate();
             
             if (filasAfectadas > 0) {
                 try (ResultSet rs = ps.getGeneratedKeys()) {
                     if (rs.next()) {
                         int idDireccion = rs.getInt(1);
-                        System.out.println(" Dirección guardada con ID: " + idDireccion);
+                        return true;
                     }
                 }
             }
             
             ps.close();
             conexion.close();
-            
-            return true;
+            return false;   
             
         } catch (Exception e) {
             System.out.println("ERROR SQL: " + e.getMessage());

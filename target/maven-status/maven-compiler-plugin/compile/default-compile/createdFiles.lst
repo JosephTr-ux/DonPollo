@@ -21,6 +21,7 @@ com\informatica\Interfaces\PostresView1$8.class
 com\informatica\DatosModel\DatosCarrito.class
 com\informatica\Interfaces\CombosView$4.class
 com\informatica\Interfaces\PostresView$9.class
+com\informatica\Interfaces\CarritoComprasView$9.class
 com\informatica\Interfaces\IndividualesView1$5.class
 com\informatica\VentanasSecundarias\DireccionView$5.class
 com\informatica\Interfaces\PromosView$20.class
@@ -32,6 +33,7 @@ com\informatica\Interfaces\MenuOpciones$7.class
 com\informatica\Interfaces\PostresView1$10.class
 com\informatica\Interfaces\PromosView1$2.class
 com\informatica\VentanasSecundarias\CompraFinalCupon$7.class
+com\informatica\Interfaces\CarritoComprasView$8.class
 com\informatica\Interfaces\MenuOpciones.class
 com\informatica\VentanasSecundarias\CompraFinalCupon$1.class
 com\informatica\Interfaces\CombosView1.class
@@ -56,6 +58,7 @@ com\informatica\Interfaces\PostresView1$7.class
 com\informatica\Interfaces\PromosView$5.class
 com\informatica\Interfaces\PromosView1$8.class
 com\informatica\Interfaces\IndividualesView1$16.class
+com\informatica\Interfaces\CuponAddView$7.class
 com\informatica\Interfaces\CuponAddView.class
 com\informatica\VentanasSecundarias\PanelDescripcionDeCompra.class
 com\informatica\Interfaces\CombosView$24.class
@@ -77,6 +80,7 @@ com\informatica\Interfaces\CarritoComprasView$5.class
 com\informatica\Interfaces\PostresView1$6.class
 com\informatica\VentanasSecundarias\PanelDescripcionDeCompra$1.class
 com\informatica\Interfaces\RegistroView$7.class
+com\informatica\Interfaces\MenuMain$10.class
 com\informatica\Interfaces\PromosView1$3.class
 com\informatica\VentanasSecundarias\DireccionView$1.class
 com\informatica\Interfaces\IndividualesView1$20.class
@@ -105,6 +109,7 @@ com\informatica\Interfaces\PostresView$8.class
 com\informatica\Interfaces\PromosView$1.class
 com\informatica\Interfaces\PromosView$24.class
 com\informatica\Interfaces\CuponesView.class
+com\informatica\Interfaces\CuponAddView$8.class
 com\informatica\Interfaces\CombosView$23.class
 com\informatica\Interfaces\IndividualesView1$12.class
 com\informatica\Interfaces\PostresView$23.class
@@ -180,6 +185,7 @@ com\informatica\Interfaces\CuponAddView$6.class
 com\informatica\Interfaces\LoginView$8.class
 com\informatica\Interfaces\PromosView$17.class
 com\informatica\Interfaces\CuponesView$4.class
+com\informatica\Interfaces\MenuMain$9.class
 com\informatica\Interfaces\PromosView$22.class
 com\informatica\Interfaces\CarritoComprasView$7.class
 com\informatica\Interfaces\MenuOpciones$10.class

@@ -238,9 +238,10 @@ public class DireccionView extends javax.swing.JFrame {
                 GraxCompra agradecimiento = new GraxCompra();
                 agradecimiento.setVisible(true);
                 agradecimiento.setLocationRelativeTo(null);
-                setVisible(false);
                 ItemsEnCarrito.vaciarCarrito();
                 dc.finalizarCompra(id_user);
+                setVisible(false);
+
                 
                 
             }else{

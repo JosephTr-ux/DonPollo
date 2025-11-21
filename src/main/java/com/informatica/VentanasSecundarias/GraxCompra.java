@@ -22,6 +22,7 @@ public class GraxCompra extends javax.swing.JFrame {
     public GraxCompra() {
         setUndecorated(true);
         initComponents();
+        tipoFuente = new CargarTipografias();
         
         btnOtraCompra.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,28));
         jLabelGrax.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,70));

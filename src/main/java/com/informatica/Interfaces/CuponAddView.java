@@ -6,6 +6,7 @@ package com.informatica.Interfaces;
 
 import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.DatosCarrito;
+import com.informatica.DatosModel.ItemsEnCarrito;
 import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.VentanasSecundarias.DireccionView;
 import com.informatica.clases.Cupones;
@@ -16,7 +17,7 @@ import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
  *
  * @author Temporal
  */
-public class CuponAddView extends javax.swing.JFrame {
+public final class CuponAddView extends javax.swing.JFrame {
 
     /**
      * Creates new form CuponAddView
@@ -24,7 +25,6 @@ public class CuponAddView extends javax.swing.JFrame {
     private int xMouse,yMouse;
     private CargarTipografias tipoFuente;
     private CuponesDatos cd;
-    private float precioNormal;
     public CuponAddView() {
         setUndecorated(false);
         initComponents();
@@ -32,23 +32,12 @@ public class CuponAddView extends javax.swing.JFrame {
         tipoFuente = new CargarTipografias();
         jLabel1.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
         btnUsarCupon.setFont(tipoFuente.fuente(tipoFuente.BebasNeue,0,48));
-    }
-
-    public CuponAddView(float precioSinCupon){
-        this();
         jLabelNuevoTotal.setVisible(false);
-        this.setPrecioNormal(precioSinCupon);
-        
-        
     }
 
-    public float getPrecioNormal() {
-        return precioNormal;
-    }
+    
 
-    public void setPrecioNormal(float precioNormal) {
-        this.precioNormal = precioNormal;
-    }
+
     
     
     
@@ -223,17 +212,18 @@ public class CuponAddView extends javax.swing.JFrame {
         DatosCarrito carrito = new DatosCarrito();
         
         int id_user = SesionUsuario.getIdUsuarioActual();
-        float precioConCupon = 0;
+        float precioSinCupon = ItemsEnCarrito.getPrecioFinal();
+        float precioConCupon = 2f;
         String codeCupon = txtCodCupon.getText();
         
         Cupones cuponUsado = cd.usarCupon(id_user, codeCupon);
         if(cuponUsado != null ){
             JOptionPane.showMessageDialog(this, "Cupon Usado con exito","Usado Exitosamente",INFORMATION_MESSAGE);
-            precioConCupon = cuponUsado.getDescuento() * this.getPrecioNormal();
+            precioConCupon = cuponUsado.getDescuento() * precioSinCupon;
             jLabelNuevoTotal.setText(String.valueOf(precioConCupon));
             jLabelNuevoTotal.setVisible(true);
             carrito.finalizarCompra(id_user, precioConCupon, codeCupon);
-            this.setPrecioNormal(precioConCupon);
+            ItemsEnCarrito.setPrecioFinal(precioConCupon);
         }else{
             JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
         }
@@ -242,9 +232,10 @@ public class CuponAddView extends javax.swing.JFrame {
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         CuponesDatos asigCupon = new CuponesDatos();
         int id_user = SesionUsuario.getIdUsuarioActual();
+        float precioConCupon = ItemsEnCarrito.getPrecioFinal();
         
         asigCupon.asignarCupon(id_user);
-        asigCupon.asignarCupon(id_user, this.getPrecioNormal());
+        asigCupon.asignarCupon(id_user, precioConCupon);
         DireccionView dw = new DireccionView();
             dw.setVisible(true);
             dw.setLocationRelativeTo(null);

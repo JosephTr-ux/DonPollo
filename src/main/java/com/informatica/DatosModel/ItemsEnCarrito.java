@@ -13,6 +13,16 @@ import java.util.ArrayList;
  */
 public class ItemsEnCarrito {
     private static ArrayList<Producto> productos = new ArrayList<>();
+    private static float precioFinal;
+
+    public static float getPrecioFinal() {
+        return precioFinal;
+    }
+
+    public static void setPrecioFinal(float precioFinal) {
+        ItemsEnCarrito.precioFinal = precioFinal;
+    }
+    
     
     public static void agregarProducto(Producto p){
         productos.add(p);

@@ -6,36 +6,28 @@ package com.informatica.VentanasSecundarias;
 
 import com.informatica.DatosModel.CuponesDatos;
 import com.informatica.DatosModel.DatosCarrito;
+import com.informatica.DatosModel.ItemsEnCarrito;
 import com.informatica.DatosModel.SesionUsuario;
 import com.informatica.Interfaces.CuponAddView;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Temporal
  */
-public class CompraFinalCupon extends javax.swing.JFrame {
+public final class CompraFinalCupon extends javax.swing.JFrame {
 
     /**
      * Creates new form CompraFinalCupon
      */
     private int xMouse,yMouse;
-    private float totalCompra;
     public CompraFinalCupon() {
         initComponents();
     }
     
-    public CompraFinalCupon(float total){
-        this();
-        this.setTotalCompra(total);
-    }
+  
 
-    public float getTotalCompra() {
-        return totalCompra;
-    }
 
-    public void setTotalCompra(float totalCompra) {
-        this.totalCompra = totalCompra;
-    }
 
     
     
@@ -189,11 +181,18 @@ public class CompraFinalCupon extends javax.swing.JFrame {
     private void btnNoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNoMouseClicked
         DatosCarrito dc = new DatosCarrito();
         CuponesDatos asigCupon = new CuponesDatos();
-        int idUser = SesionUsuario.getIdUsuarioActual();
-        asigCupon.asignarCupon(idUser);
-        asigCupon.asignarCupon(idUser, this.getTotalCompra());
         
-        dc.finalizarCompra(idUser, this.getTotalCompra(), null);
+        float totalCompra = ItemsEnCarrito.getPrecioFinal();
+        int idUser = SesionUsuario.getIdUsuarioActual();
+        
+        if(asigCupon.asignarCupon(idUser)){
+            JOptionPane.showConfirmDialog(this,"Nuevo cupon agregado \n  Codigo: REYDELCRUJIDO \n Descuento: 10% ", "Nuevo cupon conseguido", 0);
+        }
+        if(asigCupon.asignarCupon(idUser, totalCompra)){
+            JOptionPane.showConfirmDialog(this,"Nuevo cupon agregado \n  Codigo: POLLOVIP \n Descuento: 15% ", "Nuevo cupon conseguido", 0);
+        }
+        
+        dc.finalizarCompra(idUser, totalCompra, null);
         
         
         DireccionView adddireccion = new DireccionView();
@@ -203,7 +202,7 @@ public class CompraFinalCupon extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNoMouseClicked
 
     private void btnSiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSiMouseClicked
-        CuponAddView cuponAdd = new CuponAddView(this.getTotalCompra());
+        CuponAddView cuponAdd = new CuponAddView();
         cuponAdd.setVisible(true);
         cuponAdd.setLocationRelativeTo(null);
         setVisible(false);

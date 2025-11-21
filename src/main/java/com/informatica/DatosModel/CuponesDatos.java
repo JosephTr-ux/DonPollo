@@ -103,17 +103,26 @@ public class CuponesDatos {
     
     public Cupones usarCupon(int id_usuario,String codeCupon){
         boolean usado = false;
-        String sql = "SELECT cupon_owner.usado cupon_owner.descuento WHERE id_user = ? AND codigo_cupon = ? ";
+        float descuento = 2f;
+        String sql = "SELECT usado FROM cupon_owner WHERE codigo_cupon = ? AND id_user = ?  ";
+        String sql1 = "SELECT descuento FROM cupones WHERE codigo = ? ";
         String sql2 = "UPDATE cupon_owner SET usado = ? WHERE id_user = ? AND codigo_cupon = ?";
         try(Connection cn = Conexion.conectar();
               PreparedStatement stmt = cn.prepareStatement(sql)){
-                stmt.setInt(1, id_usuario);
-                stmt.setString(2,codeCupon);
+                stmt.setString(1, codeCupon);
+                stmt.setInt(2,id_usuario);
                 ResultSet rs = stmt.executeQuery();
                 if(rs.next()){
                      usado = rs.getBoolean("usado");
                 }
                 if(usado == false){
+                    try(PreparedStatement stmt1 = cn.prepareStatement(sql1)){
+                        stmt1.setString(1,codeCupon);
+                        ResultSet rs1 = stmt1.executeQuery();
+                        if(rs1.next()){
+                             descuento = rs1.getFloat("descuento");
+                        }
+                    }
                     try(PreparedStatement stmt2 = cn.prepareStatement(sql2)){
                         stmt2.setBoolean(1, true);
                         stmt2.setInt(2, id_usuario);
@@ -121,8 +130,8 @@ public class CuponesDatos {
                         ResultSet rs2 = stmt2.executeQuery();
                         return new Cupones(
                                 codeCupon,
-                                rs2.getFloat("descuento"),
-                                rs2.getBoolean("activo")
+                                descuento,
+                                true
                         ); //true que si lo encontro y lo uso
                     }
                 }else{

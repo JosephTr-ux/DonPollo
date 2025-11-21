@@ -284,8 +284,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInicioActionPerformed
 
     private void btnFinCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinCompraActionPerformed
-        float totalPrecio = this.calcularTotal();
-        CompraFinalCupon askCupon = new  CompraFinalCupon(totalPrecio);
+        CompraFinalCupon askCupon = new  CompraFinalCupon();
         askCupon.setVisible(true);
         askCupon.setLocationRelativeTo(null);
         
@@ -471,7 +470,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
                 }
             }
         }
-        
+        ItemsEnCarrito.setPrecioFinal(total);
         return total;
     }
          
