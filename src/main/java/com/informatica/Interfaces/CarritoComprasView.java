@@ -34,7 +34,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
         
         cargarProductosEnCarrito();
         
-        actualizarTotal();
+        ItemsEnCarrito.setPrecioFinal(this.actualizarTotal());
     }
     
 
@@ -411,7 +411,7 @@ public class CarritoComprasView extends javax.swing.JFrame {
             // Tipo de combo
             if (producto.getTipo() != null && !producto.getTipo().isEmpty()) {
                 JLabel lblTipo = new JLabel("• " + producto.getTipo());
-                lblTipo.setFont(new Font("Bebas Neue",Font.PLAIN,16));
+                lblTipo.setFont(new Font("Bebas Neue",Font.PLAIN,14));
                 lblTipo.setForeground(new Color(120, 120, 120));
                 infoPanel.add(Box.createRigidArea(new Dimension(0, 4)));
                 infoPanel.add(lblTipo);
@@ -470,16 +470,18 @@ public class CarritoComprasView extends javax.swing.JFrame {
                 }
             }
         }
-        ItemsEnCarrito.setPrecioFinal(total);
+        
         return total;
     }
          
-         public void actualizarTotal() {
+         public float actualizarTotal() {
     float total = calcularTotal();
+    ItemsEnCarrito.setPrecioFinal(total);
     
     lblTotal.setText(String.format("Q %.2f", total));
-    lblTotal.setFont(new Font("Bebas Neue", Font.PLAIN, 28));
+    lblTotal.setFont(new Font("Bebas Neue", Font.PLAIN, 32));
     lblTotal.setForeground(new Color(26,26,26));
+    return total;
     
 }
     

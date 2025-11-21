@@ -185,14 +185,14 @@ public final class CompraFinalCupon extends javax.swing.JFrame {
         float totalCompra = ItemsEnCarrito.getPrecioFinal();
         int idUser = SesionUsuario.getIdUsuarioActual();
         
+        dc.finalizarCompra(idUser, totalCompra, null);
+        
         if(asigCupon.asignarCupon(idUser)){
             JOptionPane.showConfirmDialog(this,"Nuevo cupon agregado \n  Codigo: REYDELCRUJIDO \n Descuento: 10% ", "Nuevo cupon conseguido", 0);
         }
         if(asigCupon.asignarCupon(idUser, totalCompra)){
             JOptionPane.showConfirmDialog(this,"Nuevo cupon agregado \n  Codigo: POLLOVIP \n Descuento: 15% ", "Nuevo cupon conseguido", 0);
         }
-        
-        dc.finalizarCompra(idUser, totalCompra, null);
         
         
         DireccionView adddireccion = new DireccionView();

@@ -209,7 +209,7 @@ public final class CuponAddView extends javax.swing.JFrame {
 
     private void btnUsarCuponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsarCuponActionPerformed
         cd = new CuponesDatos();
-        DatosCarrito carrito = new DatosCarrito();
+        
         
         int id_user = SesionUsuario.getIdUsuarioActual();
         float precioSinCupon = ItemsEnCarrito.getPrecioFinal();
@@ -219,10 +219,10 @@ public final class CuponAddView extends javax.swing.JFrame {
         Cupones cuponUsado = cd.usarCupon(id_user, codeCupon);
         if(cuponUsado != null ){
             JOptionPane.showMessageDialog(this, "Cupon Usado con exito","Usado Exitosamente",INFORMATION_MESSAGE);
-            precioConCupon = cuponUsado.getDescuento() * precioSinCupon;
+            precioConCupon = (cuponUsado.getDescuento() * precioSinCupon) - precioSinCupon;
             jLabelNuevoTotal.setText(String.valueOf(precioConCupon));
             jLabelNuevoTotal.setVisible(true);
-            carrito.finalizarCompra(id_user, precioConCupon, codeCupon);
+            
             ItemsEnCarrito.setPrecioFinal(precioConCupon);
         }else{
             JOptionPane.showMessageDialog(this, "Algo salio mal vuelve a intentarlo","Error",0);
@@ -231,11 +231,15 @@ public final class CuponAddView extends javax.swing.JFrame {
 
     private void btnSiguienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguienteActionPerformed
         CuponesDatos asigCupon = new CuponesDatos();
+        DatosCarrito carrito = new DatosCarrito();
+        
+        String codeCupon = txtCodCupon.getText();
         int id_user = SesionUsuario.getIdUsuarioActual();
         float precioConCupon = ItemsEnCarrito.getPrecioFinal();
         
         asigCupon.asignarCupon(id_user);
         asigCupon.asignarCupon(id_user, precioConCupon);
+        carrito.finalizarCompra(id_user, precioConCupon, codeCupon);
         DireccionView dw = new DireccionView();
             dw.setVisible(true);
             dw.setLocationRelativeTo(null);

@@ -73,10 +73,10 @@ public class DatosCarrito {
         String sql = "UPDATE carrito_compras SET estado = ? WHERE id_usuario = ? AND  estado = ?";
         try(Connection cn = Conexion.conectar();
               PreparedStatement ps = cn.prepareStatement(sql)){
-                ps.setBoolean(1,true);
+                ps.setInt(1,1);
                 ps.setInt(2, id_usuario);
-                ps.setBoolean(3, false);
-            
+                ps.setInt(3, 0);
+                ps.executeQuery();
             
         }catch(SQLException e){
             e.printStackTrace();
@@ -91,7 +91,8 @@ public class DatosCarrito {
                 ps.setString(1,cuponCode);
                 ps.setFloat(2, precio);
                 ps.setInt(3, id_usuario);
-                ps.setBoolean(4, false);
+                ps.setInt(4, 0);
+                ps.executeQuery();
         }catch(SQLException e){
             e.printStackTrace();
         }

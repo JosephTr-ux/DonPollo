@@ -76,7 +76,7 @@ public class CuponesDatos {
         int cantidad = 0;
         String sql1 = "SELECT COUNT(*) AS TOTAL"
                 + " FROM carrito_compras"
-                + " WHERE id_user = ? AND estado = true";
+                + " WHERE id_usuario = ? AND estado = true";
         String sql2 = "INSERT INTO cupon_owner (codigo_cupon,id_user,usado) VALUES (?,?,?)";
         try{
                        Connection cn = Conexion.conectar();

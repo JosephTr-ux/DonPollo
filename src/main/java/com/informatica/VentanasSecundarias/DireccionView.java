@@ -235,11 +235,11 @@ public class DireccionView extends javax.swing.JFrame {
             
             
             if (guardado) {
+                dc.finalizarCompra(id_user);
+                ItemsEnCarrito.vaciarCarrito();
                 GraxCompra agradecimiento = new GraxCompra();
                 agradecimiento.setVisible(true);
                 agradecimiento.setLocationRelativeTo(null);
-                ItemsEnCarrito.vaciarCarrito();
-                dc.finalizarCompra(id_user);
                 setVisible(false);
 
                 
