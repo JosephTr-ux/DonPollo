@@ -181,6 +181,9 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnCarritoMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCupon">
           <Properties>
@@ -206,6 +209,9 @@
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCuponActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlabelLogo">
           <Properties>

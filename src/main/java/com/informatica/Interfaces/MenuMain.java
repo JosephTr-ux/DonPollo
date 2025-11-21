@@ -137,6 +137,11 @@ public class MenuMain extends javax.swing.JFrame {
 
         btnCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/carrito.png"))); // NOI18N
         btnCarrito.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCarrito.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCarritoMouseClicked(evt);
+            }
+        });
 
         btnCupon.setBackground(new java.awt.Color(255, 211, 61));
         btnCupon.setFont(new java.awt.Font("Bebas Neue", 0, 48)); // NOI18N
@@ -145,6 +150,11 @@ public class MenuMain extends javax.swing.JFrame {
         btnCupon.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(193, 39, 45), 2, true));
         btnCupon.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCupon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCupon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCuponActionPerformed(evt);
+            }
+        });
 
         jlabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/donpollo-minilogo.png"))); // NOI18N
         jlabelLogo.setText("jLabel1");
@@ -289,10 +299,18 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelSalidaMousePressed
 
     private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
-        LoginView login = new LoginView();
-        login.setVisible(true);
-        login.setLocationRelativeTo(null);
-        setVisible(false);
+            Usuarios_1 user = new Usuarios_1();
+if(user.isEstaLogeado() == true) {
+    InfoUserView infoUser = new InfoUserView();
+    infoUser.setVisible(true);
+    infoUser.setLocationRelativeTo(null);
+    setVisible(false);
+} else {
+    LoginView login = new LoginView();
+    login.setVisible(true);
+    login.setLocationRelativeTo(null);
+    setVisible(false);
+}
     }//GEN-LAST:event_btnLoginMouseClicked
 
     private void btnOrdenarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdenarActionPerformed
@@ -314,6 +332,44 @@ public class MenuMain extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnOrdenarActionPerformed
+
+    private void btnCarritoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCarritoMouseClicked
+         Usuarios_1 user = new Usuarios_1();
+        if(user.isEstaLogeado() == true ){
+            MenuOpciones menuO = new MenuOpciones();
+            menuO.setVisible(true);
+            menuO.setLocationRelativeTo(null);
+            setVisible(false);
+         }else{
+            JOptionPane.showMessageDialog(this, 
+            "Debes iniciar sesión para realizar un pedido", 
+            "Iniciar Sesión Requerido", 
+            JOptionPane.WARNING_MESSAGE);
+            LoginView login = new LoginView();
+            login.setVisible(true);
+            login.setLocationRelativeTo(null);
+        setVisible(false);
+        }
+    }//GEN-LAST:event_btnCarritoMouseClicked
+
+    private void btnCuponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuponActionPerformed
+            Usuarios_1 user = new Usuarios_1();
+if(user.isEstaLogeado() == true) {
+    CuponesView cupones = new CuponesView();
+    cupones.setVisible(true);
+    cupones.setLocationRelativeTo(null);
+    setVisible(false);
+} else {
+    JOptionPane.showMessageDialog(this, 
+        "Debes iniciar sesión para ver los cupones", 
+        "Iniciar Sesión Requerido", 
+        JOptionPane.WARNING_MESSAGE);
+    LoginView login = new LoginView();
+    login.setVisible(true);
+    login.setLocationRelativeTo(null);
+    setVisible(false);
+}
+    }//GEN-LAST:event_btnCuponActionPerformed
 
     /**
      * @param args the command line arguments
